@@ -1,0 +1,270 @@
+@charset "UTF-8";
+@media screen and (min-width: 600px) {
+  .u-sp-down {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .u-sp {
+    display: none;
+  }
+}
+
+.u-sp-up {
+  display: none;
+}
+@media screen and (min-width: 600px) {
+  .u-sp-up {
+    display: block;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .u-tab-down {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .u-tab {
+    display: block;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .u-tab {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .u-tab-up {
+    display: block;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .u-pc {
+    display: block;
+  }
+}
+
+.link-space {
+  padding-top: 60px;
+  margin-top: -60px;
+}
+@media screen and (min-width: 768px) {
+  .link-space {
+    padding-top: 80px;
+    margin-top: -80px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .link-space {
+    padding-top: 120px;
+    margin-top: -120px;
+  }
+}
+
+/* リキッドレイアウト対応 */
+html {
+  font-size: 16px;
+}
+@media (max-width: 375px) {
+  html {
+    font-size: 4.2666666667vw;
+  }
+}
+@media screen and (min-width: 768px) {
+  html {
+    font-size: 1.3793103448vw;
+  }
+}
+@media (min-width: 1160px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+/* pcの電話番号発信対応 */
+@media screen and (min-width: 768px) {
+  a[href^="tel:"] {
+    pointer-events: none;
+  }
+}
+
+/* ホバー */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+body {
+  font-family: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: #3F3F3F;
+  line-height: 1.87;
+  background: #FFF;
+}
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/* Remove default padding */
+ul,
+ol {
+  padding: 0;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul,
+ol,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Set core root defaults */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* Remove list styles on ul, ol elements with a class attribute */
+ul,
+ol {
+  list-style: none;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img {
+  max-width: 100%;
+  display: block;
+  width: 100%;
+}
+
+/* Natural flow and rhythm in articles by default */
+article > * + * {
+  margin-top: 1em;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Blur images when they have no alt attribute */
+img:not([alt]) {
+  filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="filter"><feGaussianBlur stdDeviation="10" /></filter></svg>#filter');
+  -webkit-filter: blur(10px);
+          filter: blur(10px);
+}
+
+/* フォームリセット */
+input,
+button,
+select,
+textarea {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  font: inherit;
+  outline: none;
+}
+
+textarea {
+  resize: vertical;
+}
+
+input[type=checkbox],
+input[type=radio] {
+  display: none;
+}
+
+input[type=submit],
+input[type=button],
+label,
+button,
+select {
+  cursor: pointer;
+}
+
+select::-ms-expand {
+  display: none;
+}
+
+.header {
+  background: "";
+  padding: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 20;
+  height: 120px;
+}
+
+.header__logo {
+  margin: 0;
+  line-height: 1;
+  width: 200px;
+}
+.header__logo img {
+  width: 200px;
+  vertical-align: top;
+  /*  display: flex; //以下リンク範囲拡大時
+  		justify-content: center;
+  		align-items: center;
+  	  height: $header-height-pc; */
+}
+.header__logo a {
+  text-decoration: none;
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+
+.inner {
+  width: 100%;
+  padding-right: 17.5px;
+  padding-left: 17.5px;
+  margin-right: auto;
+  margin-left: auto;
+}
+@media screen and (min-width: 768px) {
+  .inner {
+    max-width: 1210px;
+    padding-right: 25px;
+    padding-left: 25px;
+  }
+}
+/*# sourceMappingURL=styles.css.map */

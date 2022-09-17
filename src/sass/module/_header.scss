@@ -1,0 +1,39 @@
+@use "global" as *;
+
+.header {
+	background: "";
+	padding: 0;
+	position: absolute; 
+	top: 0;
+	left: 0;
+	width: 100%; //positionすると浮いて幅がなくなるのを解消する
+	z-index: $layer-header;
+	height: $header-height-sp;
+}
+
+//”position: absolute;” はメインビジュアルにメニューを被せたい場合
+//”position: fixed;” はそれに加えて、常にページ上部で固定させたい場合
+
+.header__inner {
+}
+
+.header__logo {
+	margin: 0;
+	line-height: 1;
+	width: 200px;
+
+	img {
+		width: 200px;
+		vertical-align: top; //img下の隙間対策。base-line以外ならOK
+
+/*  display: flex; //以下リンク範囲拡大時
+		justify-content: center;
+		align-items: center;
+	  height: $header-height-pc; */
+	}
+
+	a {
+		text-decoration: none;
+		transition: all 0.3s ease 0s;
+	}
+}
