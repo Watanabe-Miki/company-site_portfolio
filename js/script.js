@@ -1,6 +1,3 @@
-
-jQuery(function ($) { // この中であればWordpressでも「$」が使用可能になる
-
   var topBtn = $('.pagetop');
   topBtn.hide();
 
@@ -23,14 +20,16 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
     return false;
   });
 
-  //ドロワーメニュー
-  $("#MenuButton").click(function () {
-    // $(".l-drawer-menu").toggleClass("is-show");
-    // $(".p-drawer-menu").toggleClass("is-show");
-    $(".js-drawer-open").toggleClass("open");
-    $(".drawer-menu").toggleClass("open");
-    $("html").toggleClass("is-fixed");
+  /* ドロワー */
+  $(function(){
+    $(".js-drawer-icon").on("click", function(e){
+        e.preventDefault();
+        $(".js-drawer-icon").toggleClass("is-active"); 
+        $(".js-drawer-content").toggleClass("is-active"); 
+        $(".js-drawer-background").toggleClass("is-active"); 
 
+        return false;
+    });
   });
 
 
@@ -47,4 +46,3 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
     return false;
   });
 
-});

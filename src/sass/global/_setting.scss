@@ -6,25 +6,22 @@ $inner: 1160px;
 // 余白
 $padding-pc: 25px;
 $padding-tab: 24px;
-$padding-sp: 17.5px;
+$padding-sp: 16px;
 
 // ヘッダー高さ
 $header-height-pc: 120px;
 $header-height-sp: 120px;
 
 // フォント
-$font-family-default: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif; 
-$font-family-english: sans-serif;
+$font-family-default: m-plus-rounded-1c, sans-serif; 
 $font-family-base: $font-family-default;
 $font-size-base: 16px;
 $font-weight-base: 400;
 $line-height-base: 1.87;
 
 // フォントウェイト
-$font-light: 300;
 $font-normal: 400;
 $font-medium: 500;
-$font-semibold: 600; 
 $font-bold: 700;
 
 //ラインハイト
@@ -53,7 +50,7 @@ $layer-default: 1;
 $breakpoints: (
   sm: 600,
   md: 768,
-  lg: 1024,
+  lg: 1200,
   xl: 1440,
 );
 

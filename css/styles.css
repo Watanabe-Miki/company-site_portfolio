@@ -97,10 +97,15 @@ html {
 a {
   text-decoration: none;
   color: inherit;
+  -webkit-transition: all 0.5s ease 0s;
+  transition: all 0.5s ease 0s;
+}
+a:hover, a:focus {
+  opacity: 0.6;
 }
 
 body {
-  font-family: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif;
+  font-family: m-plus-rounded-1c, sans-serif;
   font-size: 16px;
   font-weight: 400;
   color: #3F3F3F;
@@ -223,40 +228,372 @@ select::-ms-expand {
   display: none;
 }
 
-.header {
-  background: "";
-  padding: 0;
+.btn {
+  display: inline-block;
+  width: 202px;
+  width: 12.625rem;
+  max-width: 100%;
+  padding: 17.5px 10px;
+  padding: 1.09375rem 0.625rem;
+  background-color: #90C2DF;
+  border: 1px solid transparent;
+  color: #FFF;
+  font-size: 18px;
+  font-size: 1.125rem;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 2.0625rem;
+}
+.btn:focus, .btn:hover {
+  background-color: #fff;
+  border-color: currentColor;
+  color: #90C2DF;
+}
+
+/* 電話発信の指定 */
+.cta-tel {
+  cursor: pointer;
+  /* md以上電話発信なし */
+}
+@media screen and (min-width: 1200px) {
+  .cta-tel {
+    cursor: default;
+  }
+  .cta-tel a[href^="tel:"] {
+    pointer-events: none;
+  }
+}
+
+.cta-tel__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.cta-tel__icon {
+  width: 25px;
+  width: 1.5625rem;
+  height: 25px;
+  height: 1.5625rem;
+}
+
+.cta-tel__text {
+  font-size: 22px;
+  font-size: 1.375rem;
+  font-weight: 700;
+  line-height: 1;
+  margin-bottom: 14px;
+  margin-bottom: 0.875rem;
+}
+
+.cta-tel__text_sm {
+  font-size: 12px;
+  font-size: 0.75rem;
+  font-weight: 400;
+  line-height: 1;
+  margin-left: 15px;
+  margin-left: 0.9375rem;
+}
+
+.js-drawer-icon {
+  position: fixed;
+  top: 52px;
+  right: 16px;
+  z-index: 40;
+  -webkit-transition: -webkit-transform ease 0.5s 0s;
+  transition: -webkit-transform ease 0.5s 0s;
+  transition: transform ease 0.5s 0s;
+  transition: transform ease 0.5s 0s, -webkit-transform ease 0.5s 0s;
+  display: block;
+}
+@media screen and (min-width: 768px) {
+  .js-drawer-icon {
+    right: 25px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .js-drawer-icon {
+    display: none;
+  }
+}
+.js-drawer-icon.is-active .js-drawer-icon__bar1 {
+  -webkit-transition: -webkit-transform 0.3s ease 0s;
+  transition: -webkit-transform 0.3s ease 0s;
+  transition: transform 0.3s ease 0s;
+  transition: transform 0.3s ease 0s, -webkit-transform 0.3s ease 0s;
+  top: 9.9px;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+.js-drawer-icon.is-active .js-drawer-icon__bar2 {
+  -webkit-transition: -webkit-transform 0.3s ease 0s;
+  transition: -webkit-transform 0.3s ease 0s;
+  transition: transform 0.3s ease 0s;
+  transition: transform 0.3s ease 0s, -webkit-transform 0.3s ease 0s;
+  top: 9.9px;
+  display: none;
+}
+.js-drawer-icon.is-active .js-drawer-icon__bar3 {
+  -webkit-transition: -webkit-transform 0.3s ease 0s;
+  transition: -webkit-transform 0.3s ease 0s;
+  transition: transform 0.3s ease 0s;
+  transition: transform 0.3s ease 0s, -webkit-transform 0.3s ease 0s;
+  top: 9.9px;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+.js-drawer-icon.is-active .js-drawer-icon__bar1,
+.js-drawer-icon.is-active .js-drawer-icon__bar2,
+.js-drawer-icon.is-active .js-drawer-icon__bar3 {
+  background: #3F3F3F;
+}
+
+/* barがはいる箱 */
+.js-drawer-icon__bars {
+  width: 27px;
+  height: 16px;
+  display: block;
+  position: relative;
+}
+
+/* それぞれのbarの線分を作る */
+.js-drawer-icon__bar1,
+.js-drawer-icon__bar2,
+.js-drawer-icon__bar3 {
+  width: 27px;
+  height: 1px;
+  background: #3F3F3F;
   position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.js-drawer-icon__bar1 {
+  top: 0;
+}
+
+.js-drawer-icon__bar2 {
+  top: 8px;
+}
+
+.js-drawer-icon__bar3 {
+  top: 16px;
+}
+
+/* ドロワーメニュー全体の箱 */
+.js-drawer-content {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  right: 0;
+  top: 0;
+  background: #FFF;
+  z-index: 39;
+  -webkit-transform: translateX(105%);
+          transform: translateX(105%);
+  -webkit-transition: -webkit-transform ease 0.5s 0s;
+  transition: -webkit-transform ease 0.5s 0s;
+  transition: transform ease 0.5s 0s;
+  transition: transform ease 0.5s 0s, -webkit-transform ease 0.5s 0s;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.js-drawer-content.is-active {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+
+.js-drawer-content__items {
+  padding-top: 24px;
+  text-align: center;
+}
+
+.js-drawer-content__item {
+  margin-bottom: 48px;
+}
+.js-drawer-content__item:nth-child(4) {
+  margin-bottom: 51px;
+}
+@media screen and (min-width: 768px) {
+  .js-drawer-content__item {
+    margin-bottom: 60px;
+  }
+}
+
+.js-drawer-content__link {
+  color: #3F3F3F;
+  font-size: 20px;
+  font-weight: 400;
+  display: block;
+}
+@media screen and (min-width: 768px) {
+  .js-drawer-content__link {
+    font-size: 24px;
+  }
+}
+
+.js-drawer-tel {
+  padding: 22px 21px 14px 23px;
+  background: #E7F6FF;
+  border-radius: 10px;
+}
+
+.js-drawer-tel__text {
+  font-size: 21px;
+}
+@media screen and (min-width: 768px) {
+  .js-drawer-tel__text {
+    font-size: 24px;
+  }
+}
+
+.js-drawer-tel__text_sm {
+  margin-left: 5px;
+}
+
+.global-nav {
+  display: none;
+}
+@media screen and (min-width: 1200px) {
+  .global-nav {
+    display: block;
+    height: 120px;
+  }
+}
+
+.global-nav__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: inherit;
+}
+
+.global-nav__item {
+  height: inherit;
+}
+.global-nav__item:not(:last-child) {
+  margin-right: 26px;
+}
+
+.global-nav__link {
+  font-size: 18px;
+  font-weight: 400;
+  display: block;
+}
+@media screen and (min-width: 1200px) {
+  .global-nav__link {
+    line-height: 120px;
+  }
+}
+
+.header {
+  background: pink;
+  padding: 0;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   z-index: 20;
   height: 120px;
+  -webkit-transition: all 0.5s ease 0s;
+  transition: all 0.5s ease 0s;
+}
+@media screen and (min-width: 1200px) {
+  .header {
+    height: 120px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .header.change-color {
+    background: rgba(255, 255, 255, .8);
+  }
+}
+
+.header__inner {
+  width: 100%;
+  padding-right: 16px;
+  padding-left: 16px;
+  margin-right: auto;
+  margin-left: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: inherit;
+}
+@media screen and (min-width: 768px) {
+  .header__inner {
+    max-width: 80%;
+    padding-right: 25px;
+    padding-left: 25px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .header__inner {
+    width: 98.92307%;
+    max-width: 1286px;
+    padding-right: 25px;
+    padding-left: 25px;
+  }
 }
 
 .header__logo {
-  margin: 0;
-  line-height: 1;
-  width: 200px;
-}
-.header__logo img {
-  width: 200px;
-  vertical-align: top;
-  /*  display: flex; //以下リンク範囲拡大時
-  		justify-content: center;
-  		align-items: center;
-  	  height: $header-height-pc; */
+  -webkit-transition: all 0.5s ease 0s;
+  transition: all 0.5s ease 0s;
 }
 .header__logo a {
-  text-decoration: none;
-  -webkit-transition: all 0.3s ease 0s;
-  transition: all 0.3s ease 0s;
+  display: inline-block;
+  line-height: 120px;
+}
+@media screen and (min-width: 1200px) {
+  .header__logo {
+    margin-right: 1rem;
+  }
+}
+
+.header-tel {
+  display: none;
+  margin-left: auto;
+}
+@media screen and (min-width: 1200px) {
+  .header-tel {
+    display: block;
+  }
+}
+
+.header__btn-box {
+  margin-left: 20px;
+  margin-left: 1.25rem;
+}
+
+.header__btn {
+  display: none;
+}
+@media screen and (min-width: 1200px) {
+  .header__btn {
+    display: block;
+    width: 11.25rem;
+  }
+}
+@media screen and (min-width: 1250px) {
+  .header__btn {
+    width: 12.625rem;
+  }
 }
 
 .inner {
   width: 100%;
-  padding-right: 17.5px;
-  padding-left: 17.5px;
+  padding-right: 16px;
+  padding-left: 16px;
   margin-right: auto;
   margin-left: auto;
 }
@@ -265,6 +602,23 @@ select::-ms-expand {
     max-width: 1210px;
     padding-right: 25px;
     padding-left: 25px;
+  }
+}
+
+.logo {
+  font-size: 24px;
+  font-size: 1.5rem;
+  color: #90C2DF;
+  font-weight: 700;
+}
+@media screen and (min-width: 768px) {
+  .logo {
+    font-size: 1.6875rem;
+  }
+}
+@media screen and (min-width: 1250px) {
+  .logo {
+    font-size: 1.875rem;
   }
 }
 /*# sourceMappingURL=styles.css.map */

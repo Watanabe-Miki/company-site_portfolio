@@ -1,0 +1,41 @@
+@use "global" as *;
+/* 電話発信の指定 */
+.cta-tel {
+  cursor: pointer;
+
+  /* md以上電話発信なし */
+  @include mq('lg') {
+      cursor: default;
+      
+      a[href^="tel:"]{ 
+      pointer-events: none;
+      }
+  }
+}
+
+.cta-tel__link {
+  
+}
+
+.cta-tel__content {
+  display: flex;
+}
+
+.cta-tel__icon {
+  width: rem(25);
+  height: rem(25);
+}
+
+.cta-tel__text {
+  font-size: rem(22);
+  font-weight: $font-bold;
+  line-height: 1;
+  margin-bottom: rem(14);
+}
+
+.cta-tel__text_sm {
+  font-size: rem(12);
+  font-weight: $font-normal;
+  line-height: 1;
+  margin-left: rem(15);
+}

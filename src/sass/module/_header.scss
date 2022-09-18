@@ -1,39 +1,88 @@
 @use "global" as *;
 
 .header {
-	background: "";
+	background: pink;
+	//background: $color-bg-base;
 	padding: 0;
-	position: absolute; 
+	position: fixed; 
 	top: 0;
 	left: 0;
 	width: 100%; //positionすると浮いて幅がなくなるのを解消する
 	z-index: $layer-header;
 	height: $header-height-sp;
+	transition: all 0.5s ease 0s;
+
+	@include mq('lg') {
+		height: $header-height-pc;
+	}
+
+	&.change-color {
+
+		@include mq('lg') {
+				background: rgba(#ffffff, 0.8);
+		}
+	}
 }
 
-//”position: absolute;” はメインビジュアルにメニューを被せたい場合
-//”position: fixed;” はそれに加えて、常にページ上部で固定させたい場合
-
 .header__inner {
+	width: 100%;
+	padding-right: $padding-sp;
+	padding-left: $padding-sp;
+	margin-right: auto;
+	margin-left: auto;
+	display: flex;
+	align-items: center;
+	height: inherit;
+
+	@include mq('md') {
+    max-width: 80%;
+    padding-right: $padding-pc;
+    padding-left: $padding-pc;
+	}
+
+	@include mq('lg') {
+		width: 98.92307%;
+		max-width: 1286px;
+		padding-right: $padding-pc;
+		padding-left: $padding-pc;
+	}
 }
 
 .header__logo {
-	margin: 0;
-	line-height: 1;
-	width: 200px;
-
-	img {
-		width: 200px;
-		vertical-align: top; //img下の隙間対策。base-line以外ならOK
-
-/*  display: flex; //以下リンク範囲拡大時
-		justify-content: center;
-		align-items: center;
-	  height: $header-height-pc; */
-	}
-
+	transition: all 0.5s ease 0s;
+	
 	a {
-		text-decoration: none;
-		transition: all 0.3s ease 0s;
+		display: inline-block;
+		line-height: $header-height-sp;
 	}
+
+	@include mq('lg') {
+		margin-right: rem(16);
+	}
+}
+
+.header-tel {
+	display: none;
+	margin-left: auto;
+
+	@include mq('lg') {
+		display: block;
+	}
+}
+
+.header__btn-box {
+	margin-left: rem(20);
+}
+
+.header__btn {
+	display: none;
+
+	@include mq('lg') {
+		display: block;
+		width: rem(180);
+	}
+
+	@media screen and (min-width: 1250px) {
+		width: rem(202);
+  }
 }

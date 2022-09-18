@@ -21,12 +21,73 @@
   <!-- ファビコン -->
   <link rel="icon" href="./images/common/favicon.ico" id="favicon" />
   <link rel="apple-touch-icon" sizes="180x180" href="./images/common/apple-touch-icon-180x180.png" />
+  <!-- Adbe Fonts -->
+  <script>
+    (function(d) {
+      var config = {
+        kitId: 'mrz4zbp',
+        scriptTimeout: 3000,
+        async: true
+      },
+      h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+    })(document);
+  </script>
   <!-- css -->
   <link rel="stylesheet" href="./css/styles.css">
 </head>
 <body>
+  <header class="header js-header">
+    <div class="header__inner">
+      <h1 class="header__logo logo"><a href="#">まき社会保険労務士事務所</a></h1>
+      <nav class="header-nav global-nav" aria-label="header">
+        <ul class="global-nav__list">
+          <li class="global-nav__item"><a class="global-nav__link js-global-nav__link" href="#service">サービス内容</a></li>
+          <li class="global-nav__item"><a class="global-nav__link js-global-nav__link" href="#company">事務所案内</a></li>
+          <li class="global-nav__item"><a class="global-nav__link js-global-nav__link" href="#access">アクセス</a></li>
+        </ul>
+      </nav><!-- header-nav -->
+      <div class="header-tel cta-tel">
+        <a href="tel:086-250-2996" class="cta-tel__link">
+          <div class="cta-tel__content">
+            <img class="cta-tel__icon" src="./images/common/tel-icon.png" alt="電話番号 086-250-2996">
+            <p class="cta-tel__text">086-250-2996</p>
+          </div>
+          <p class="cta-tel__text_sm">営業時間　9時～17時（土日祝除く）</p>
+        </a>
+      </div><!-- header-tel -->
+        <div class="header__btn-box">
+          <a href="#contact" class="btn header__btn">お問い合わせ</a>
+        </div>
+    </div><!-- header__inner -->
+  </header>
+
+  <!-- ドロワーのバー部分 --> 
+  <div class="js-drawer-icon">
+    <div class="js-drawer-icon__bars">
+        <div class="js-drawer-icon__bar1"></div>
+        <div class="js-drawer-icon__bar2"></div>
+        <div class="js-drawer-icon__bar3"></div>
+    </div>
+  </div>
+  <!-- ドロワーメニュー部分 -->
+  <div class="js-drawer-content">
+      <div class="js-drawer-content__items">
+          <div class="js-drawer-content__item"><a class="js-drawer-content__link" href="#service">サービス内容</a></div>
+          <div class="js-drawer-content__item"><a class="js-drawer-content__link" href="#company">事務所案内</a></div>
+          <div class="js-drawer-content__item"><a class="js-drawer-content__link" href="#access">アクセス</a></div>
+          <div class="js-drawer-content__item"><a class="js-drawer-content__link" href="#contact">お問い合わせ</a></div>
+          <div class="js-drawer-tel cta-tel">
+            <a href="tel:086-250-2996" class="cta-tel__link">
+              <div class="cta-tel__content">
+                <img class="cta-tel__icon" src="./images/common/tel-icon.png" alt="電話番号 086-250-2996">
+                <p class="js-drawer-tel__text cta-tel__text">086-250-2996</p>
+              </div>
+              <p class="cta-tel__text_sm js-drawer-tel__text_sm">営業時間　9時～17時（土日祝除く）</p>
+            </a>
+          </div><!-- js-drawer-tel -->
+      </div><!-- js-drawer-content__items -->
+  </div><!-- js-drawer-content -->
   
-  <div class="copylight">Copyright &copy; テストサイト.jp</div>
   <!-- JavaScript -->
   <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
   <script defer src="./js/script.js"></script>

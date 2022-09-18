@@ -1,0 +1,33 @@
+@use "global" as *;
+.global-nav {
+  display: none;
+  
+  @include mq('lg') { // lg以上でnav表示
+    
+    display: block;
+    height: $header-height-pc;
+  }
+}
+
+.global-nav__list {
+  display: flex;
+  height: inherit;
+}
+
+.global-nav__item {
+  height: inherit;
+
+  &:not(:last-child) {
+    margin-right: 26px;
+  }
+}
+
+.global-nav__link {
+  font-size: 18px;
+  font-weight: $font-normal;
+  display: block;
+  
+  @include mq('lg') {
+    line-height: $header-height-pc;
+  }
+}
