@@ -1,0 +1,74 @@
+@use "global" as *;
+.greeting-card {
+
+}
+
+.greeting-card__img {
+  margin-bottom: 23px;
+
+  @include mq('md') {
+    margin-bottom: 41px;
+  }
+}
+
+.greeting-card__body {
+}
+
+.greeting-card__title {
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+.greeting-card__name {
+  font-size: 18px;
+  text-align: center;
+  margin-bottom: 12px;
+
+  @include mq('md') {
+    font-size: 20px;
+  }
+}
+
+.greeting-card__content {
+  width: 82.21574%;
+  margin: 0 auto;
+}
+
+.greeting-card__row {
+  display: flex;
+  margin-bottom: 5px;
+  justify-content: center;
+  
+  @include mq('md') {
+    justify-content: center;
+  }
+
+  dt,
+  dd {
+    font-size: 14px;
+
+    @include mq('md') {
+      font-size: $font-size-base;
+    }
+  }
+
+  dt {
+    width: 25%;    
+  }
+  
+  dd {
+    width: calc(100% - 25%);
+
+    @media screen and (min-width: 500px) {
+      width: calc(82.21574% - 25%);      
+    }
+
+    @include mq('md') {
+      width: calc(66% - 25%);
+    }
+
+    @include mq('lg') {
+      width: calc(100% - 25%);
+    }
+  }
+}

@@ -93,12 +93,14 @@ $mediaquerys: (
 }
 
 .u-tab-down {
+  display: none;
   @include mq('md') {
     display: none;
   }
 }
 
 .u-tab {
+  display: none;
   @include mq('md') {
     display: block;
   }
@@ -124,7 +126,7 @@ $mediaquerys: (
 
 .u-pc {
   display: none;
-  
+
   @include mq('lg') {
     display: block;
   }

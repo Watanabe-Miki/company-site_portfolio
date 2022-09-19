@@ -2,9 +2,11 @@
 .service {
   background: $color-bg-accent;
   padding-top: 106px;
+  margin-bottom: 86px;
 
   @include mq('lg') {
     padding-top: 104px;
+    margin-bottom: 53px;
   }
 }
 

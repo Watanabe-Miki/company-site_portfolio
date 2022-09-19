@@ -5,17 +5,16 @@
 	max-width: 100%;
 	padding: rem(17.5) rem(10);
 	background-color: $color-main;
-	border: 1px solid transparent;
 	color: #FFF;
 	font-size: rem(18);
 	text-align: center;
 	text-decoration: none;
 	border-radius: rem(33);
-
+	
 	&:focus,
 	&:hover {
+		border: 1px solid currentColor;
 		background-color: #fff;
-		border-color: currentColor;
 		color: $color-main;
 	}
 }

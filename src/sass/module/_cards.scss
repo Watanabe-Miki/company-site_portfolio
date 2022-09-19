@@ -29,11 +29,11 @@
   }
 
   @include mq('lg') {
-    width: calc(33.33333% - 70px * 2 / 3);
-    margin-right: 70px;
+    width: calc(33.33333% - 63px * 2 / 3);
+    margin-right: 63px;
 
     &:nth-of-type(2n) {
-      margin-right: 70px;
+      margin-right: 63px;
     }
 
     &:nth-of-type(3n) {

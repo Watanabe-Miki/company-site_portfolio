@@ -1,0 +1,39 @@
+@use "global" as *;
+.shine { 
+  position: relative;
+  overflow: hidden;
+}
+
+/* 光の疑似要素 */
+.shine {
+  &::before {
+    display: block;
+    z-index: 2;
+    left: -10%;
+    top: -40%;
+    content: "";
+    width: 30px;
+    height: 120px;
+    position: absolute;
+    transform: rotate(35deg);
+    background-image: linear-gradient(left,rgba(#90C2DF,0) 0%,rgba(255,255,255,.5) 50%,rgba(#90C2DF,0) 100%);
+    animation: shiny 2.5s infinite linear;
+
+  }
+  
+  &:focus::before,
+  &:hover::before {
+    display: none;
+  }
+
+}
+/* 光の動き */
+@keyframes shiny {
+  0% {
+    left: -10%;
+  }
+
+  100% {
+    left: 120%;
+  }
+}

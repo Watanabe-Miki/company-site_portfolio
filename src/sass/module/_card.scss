@@ -12,6 +12,7 @@
   height: 100px;
   box-shadow: 10px 10px 0 rgba(0, 0, 0, .16);
   margin-bottom: 26px;
+  background: $color-bg-base;
 
   @include mq('lg') {
     height: 140px;
@@ -80,7 +81,7 @@
   font-weight: $font-bold;
 
   span {
-    font-size: 16px;
+    font-size: $font-size-base;
     font-weight: $font-normal;
   }
 
@@ -95,25 +96,25 @@
 }
 
 .card__content {
-  margin-bottom: 22px;
+  margin-bottom: 10px;
+
+  @include mq('lg') {
+    margin-bottom: 22px;
+  }
 }
 
 .card__text {
   line-height: 1.8;
-
-  &.space_sm {
-    letter-spacing: -0.03em;
-    
-    @include mq('sm') {
-      letter-spacing: normal;
-    }
-  }
 }
 
 .card__content_ex {
   border: 1px dashed $color-main;
   width: 100%;
   padding: 9px 7px;
+}
+
+.card__content_ex-text {
+  font-size: 12px;
 }
 
 .card__footer {

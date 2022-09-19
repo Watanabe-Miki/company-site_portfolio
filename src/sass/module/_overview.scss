@@ -1,0 +1,42 @@
+@use "global" as *;
+.overview {
+}
+
+.overview__item {
+  padding: 18px 0 18px 5px;
+  border-bottom: 2px solid $color-main;
+  
+  @include mq('md') {
+    padding: 14px 0 14px 5px;   
+  }
+  
+  @include mq('lg') {
+    padding: 12px 0 12px 5px;    
+  }
+}
+
+.overview__row {
+  display: flex;
+
+  dt,
+  dd {
+    font-size: 14px;
+
+    @include mq('md') {
+      font-size: $font-size-base;
+    }
+  }
+
+  dt {
+    width: 30%;
+  }
+
+  dd {
+    width: calc(100% - 30%);
+  }
+
+  dd p {
+
+  }
+
+}

@@ -1,0 +1,153 @@
+@use "global" as *;
+.company {
+  margin-bottom: 100px;
+}
+
+.company__inner {
+  max-width: 500px;
+
+  @include mq('md') {
+    max-width: 800px;
+  }
+
+  @include mq('lg') {
+    max-width: $inner + strip-unit($padding-pc) * 2;
+    padding-right: $padding-pc;
+    padding-left: $padding-pc;
+  }
+}
+
+.company__title {
+  margin-bottom: 65px;
+}
+
+.company__sub-title {
+  margin-bottom: 30px;
+
+  @include mq('lg') {
+    margin-bottom: 42px;
+  }
+}
+
+.company-wrap_head {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 56px;
+  margin-bottom: 60px;
+
+  @include mq('lg') {
+    grid-template-columns: 400px 1fr;
+    gap: 45px;
+    margin-left: 5.25862%;
+  }
+}
+
+.company__img {
+  position: relative;
+
+  @include mq('md') {
+    margin-top: 20px;
+  }
+  
+  img {
+    border-radius: 30px;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+
+    @media screen and (min-width: 500px) {
+      border-radius: 50px;
+    }
+
+    @include mq('md') {
+      overflow: hidden;
+      border-radius: 60px;
+    }
+
+    @include mq('lg') {
+      border-radius: 30px;
+    }
+  }
+
+  &::after {
+    width: 100%;
+    height: 100%;
+    border-radius: 30px;
+    background: $color-bg-accent;
+    content: "";
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    z-index: -1;
+
+    @media screen and (min-width: 500px) {
+      border-radius: 50px;
+      top: 10px;
+      left: 10px;  
+    }
+    
+    @include mq('md') {
+      border-radius: 60px;
+      top: 15px;
+      left: 15px;  
+    }
+
+    @include mq('lg') {
+      border-radius: 30px;
+      width: 400px;
+      height: 250px;  
+      top: 10px;
+      left: 10px;  
+    }
+  }
+}
+
+.company-wrap_foot {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 36px;
+
+  @include mq('lg') {
+    gap: 0;
+    grid-template-columns: 734px 373px;     grid-template-rows: 1fr 430px;
+  }
+}
+
+.company-greeting {
+  margin-bottom: 30px;
+
+  @include mq('md') {
+    margin-bottom: 0;
+    background: $color-bg-accent;
+    border-radius: 38px;
+    padding: 60px;
+    margin-top: 60px;
+  }
+  
+  @include mq('lg') {
+    margin-left: 18px;
+  }
+}
+
+.company-greeting__text {
+  line-height: 1.875;
+
+  @include mq('md') {
+    line-height: 2.25;
+  }
+}
+
+.company__greeting-card {
+
+  @include mq('lg') {
+    margin-left: -27px;
+  }
+}
+
+.company__greeting-content {
+
+  @include mq('lg') {
+    margin: 0;
+    margin-left: auto;
+  }
+}
