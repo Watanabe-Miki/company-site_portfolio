@@ -1,0 +1,70 @@
+@use "global" as *;
+.service {
+  background: $color-bg-accent;
+  padding-top: 106px;
+
+  @include mq('lg') {
+    padding-top: 104px;
+  }
+}
+
+.service__bg {
+  background: url(../../../images/service/service-bg_sp.png) no-repeat center center / cover;
+  width: 100%;
+  
+  @include mq('lg') {
+    background: url(../../../images/service/service-bg_pc.png) no-repeat center center / cover;
+  }
+}
+
+.service__inner {
+  
+  @include mq('md') {
+    max-width: 800px;
+  }
+
+  @include mq('lg') {
+    max-width: $inner + strip-unit($padding-pc) * 2;
+    padding-right: $padding-pc;
+    padding-left: $padding-pc;
+  }
+}
+
+.service__title {
+  margin-bottom: 39px;
+  
+  @include mq('lg') {
+    margin-bottom: 45px;
+  }
+}
+
+.service__sub-title {
+  max-width: 500px;
+  margin: 0 auto;
+  margin-bottom: 30px;
+  
+  @include mq('md') {
+    max-width: 100%;
+  }
+
+  @include mq('lg') {
+    margin-bottom: 24px;
+  }
+}
+
+.service__notice {
+  font-size: 18px;
+  line-height: 1.7;
+  max-width: 500px;
+  margin: 0 auto;
+  margin-bottom: 47px;
+
+  @include mq('md') {
+    max-width: 100%;
+  }
+
+  @include mq('lg') {
+    text-align: center;
+    margin-bottom: 61px;
+  }
+}

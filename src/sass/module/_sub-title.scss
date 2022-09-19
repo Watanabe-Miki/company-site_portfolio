@@ -1,0 +1,19 @@
+@use "global" as *;
+.sub-title {
+  font-size: 20px;
+  font-weight: $font-medium;
+  padding-left: 14.5px;
+  position: relative;
+
+  &::before {
+    width: 5px;
+    height: 25px;
+    background: $color-main;
+    border-radius: 100vh;
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(-50%, -50%);
+  }
+}

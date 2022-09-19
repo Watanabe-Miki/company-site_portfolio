@@ -1,0 +1,63 @@
+@use "global" as *;
+.main {
+  background-image: url(../../../images/main/main-sp.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-top: $header-height-sp;
+  height: 673px;
+    
+  @include mq('sm') {
+    background-image: url(../../../images/main/main.jpg);
+    background-position: 68% center;
+    height: 750px;
+  }
+  
+  @include mq('lg') {
+    background-position: center center;
+    height: 958px;
+    margin-top: $header-height-pc;
+  }
+}
+
+.main__inner {
+  padding-top: 39.7%;
+
+  @media screen and (min-width: 850px) {
+    padding-top: 312px;
+  }
+  
+  @include mq('lg') {
+    padding-top: 433px;    
+  }
+}
+
+.main__content {
+  text-align: center;
+}
+
+.main__title {
+  color: #ffffff;
+  font-size: 30px;
+  font-weight: $font-normal;
+  text-shadow: 0 3px 6px rgba(0, 0, 0, .16);
+  line-height: 1.7;
+  
+  @include mq('lg') {
+    font-size: 40px;
+    line-height: 1;
+    margin-bottom: 18px;
+  }
+}         
+
+.main__text {
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: $font-normal;
+  text-shadow: 0 3px 6px rgba(0, 0, 0, .16);
+
+  @include mq('lg') {
+    font-size: 30px;
+  }
+}
+

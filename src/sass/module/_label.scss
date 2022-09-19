@@ -1,0 +1,9 @@
+@use "global" as *;
+.label {
+	display: inline-block;
+	padding: .6em .6em;
+	background-color: $color-main;
+	color: #FFF;
+	font-size: 1rem;
+	font-weight: $font-normal;
+}

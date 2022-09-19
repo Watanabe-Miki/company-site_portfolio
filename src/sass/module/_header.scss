@@ -1,8 +1,7 @@
 @use "global" as *;
 
 .header {
-	background: pink;
-	//background: $color-bg-base;
+	background: $color-bg-base;
 	padding: 0;
 	position: fixed; 
 	top: 0;
@@ -17,10 +16,7 @@
 	}
 
 	&.change-color {
-
-		@include mq('lg') {
-				background: rgba(#ffffff, 0.8);
-		}
+		background: rgba(#ffffff, 0.8);
 	}
 }
 

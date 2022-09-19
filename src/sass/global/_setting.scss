@@ -56,7 +56,10 @@ $breakpoints: (
 
 //メディアクエリー
 $mediaquerys: (
+
+  sm-down: "screen and (max-width: #{map-get($breakpoints,'sm')-1}px)",
   sm: "screen and (min-width: #{map-get($breakpoints,'sm')}px)",
+  md-down: "screen and (max-width: #{map-get($breakpoints,'md')-1}px)",
   md: "screen and (min-width: #{map-get($breakpoints,'md')}px)",
   lg: "screen and (min-width: #{map-get($breakpoints,'lg')}px)",
   xl: "screen and (min-width: #{map-get($breakpoints,'xl')}px)",
@@ -74,55 +77,52 @@ $mediaquerys: (
 }
 
 // 非表示
-.u-sp-down {
-  
-  @include mq('sm') {
-    display: none;
-  }
-}
 
 .u-sp {
-
-  @include mq('md') {
+  @include mq('sm') {
     display: none;
   }
 }
 
 .u-sp-up {
   display: none;
+
   @include mq('sm') {
     display: block;
   }
 }
 
 .u-tab-down {
-
   @include mq('md') {
     display: none;
   }
 }
 
 .u-tab {
-  
   @include mq('md') {
     display: block;
   }
 
-  @include mq('xl') {
+  @include mq('lg') {
     display: none;
   }
 }
 
 .u-tab-up {
-
   @include mq('md') {
     display: block;
   }
 }
 
-.u-pc {
+.u-pc-down {
   
-  @include mq('xl') {
+  @include mq('lg') {
+    display: none;
+  }
+}
+
+.u-pc {
+  @include mq('lg') {
     display: block;
   }
 }

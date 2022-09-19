@@ -33,7 +33,6 @@
   });
 
 
-
   // スムーススクロール (絶対パスのリンク先が現在のページであった場合でも作動)
 
   $(document).on('click', 'a[href*="#"]', function () {
@@ -46,3 +45,17 @@
     return false;
   });
 
+/* ヘッダースクロール */
+var mvh = $('.main').height();
+
+$(window).scroll(function () {
+  var top = $(window).scrollTop();
+
+  if (mvh < top) {
+    $('.js-header').addClass('change-color');
+  } else {
+    $('.js-header').removeClass('change-color');
+  }
+
+  return false;
+});
