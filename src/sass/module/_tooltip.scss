@@ -1,0 +1,63 @@
+@use "global" as *;
+.tooltip {
+  background: $color-bg-base;
+  width: 170px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  border-radius: 6px;
+  position: relative;
+
+  &::after {
+      content: "";
+      position: absolute;
+      top: 100%; //親要素の高さの下側に貼り付ける
+      left: 50%; //親要素左端からの距離
+      transform: translateX(-50%);
+      //三角の指定//
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 10px 8px 0 8px;
+      border-color: $color-bg-base transparent transparent transparent;    
+  } 
+
+  @include mq('lg') {
+    display: none;
+  }
+}
+
+.tooltip__text-wrap {
+  margin-left: 8px;
+}
+
+.tooltip,
+.tooltip__text_md,
+.tooltip__text_lg,
+.tooltip__text_sm, 
+.tooltip__text_xs {
+  color: $color-main;
+}
+
+.tooltip {
+  font-size: 10px;
+}
+
+.tooltip__text_md {
+  font-size: 12px;
+}
+
+.tooltip__text_lg {
+  font-size: 20px;
+  font-weight: $font-bold;
+}
+
+span.tooltip__text_sm {
+  font-size: 11px;
+  font-weight: $font-bold;
+}
+
+.tooltip__text_xs {
+  font-size: 6px !important;
+}

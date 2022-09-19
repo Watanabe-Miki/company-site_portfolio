@@ -37,12 +37,18 @@
   }
 }
 
+.u-pc-down {
+  display: block;
+}
 @media screen and (min-width: 1200px) {
   .u-pc-down {
     display: none;
   }
 }
 
+.u-pc {
+  display: none;
+}
 @media screen and (min-width: 1200px) {
   .u-pc {
     display: block;
@@ -228,6 +234,54 @@ select::-ms-expand {
   display: none;
 }
 
+.badge {
+  display: none;
+}
+@media screen and (min-width: 1200px) {
+  .badge {
+    width: 87px;
+    height: 87px;
+    border-radius: 100vh;
+    background: #FFF;
+    font-size: 10px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+.badge__text-wrap {
+  text-align: center;
+}
+
+.badge,
+.badge__text_md,
+.badge__text_lg,
+.badge__text_sm {
+  line-height: 1.2;
+  color: #90C2DF;
+}
+
+.badge__text_md {
+  font-size: 12px;
+}
+
+.badge__text_lg {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.badge__text_sm {
+  font-size: 11px;
+  font-weight: 700;
+}
+
 .btn {
   display: inline-block;
   width: 202px;
@@ -385,6 +439,7 @@ select::-ms-expand {
 .cards {
   max-width: 500px;
   margin: 0 auto;
+  margin-bottom: -60px;
 }
 @media screen and (min-width: 768px) {
   .cards {
@@ -396,14 +451,19 @@ select::-ms-expand {
         flex-wrap: wrap;
   }
 }
+@media screen and (min-width: 1200px) {
+  .cards {
+    margin-bottom: -70px;
+  }
+}
 
 .cards__item {
   margin-bottom: 60px;
 }
 @media screen and (min-width: 768px) {
   .cards__item {
-    width: calc(50% - 25px);
-    margin-right: 50px;
+    width: calc(50% - 30px);
+    margin-right: 60px;
     max-width: 100%;
   }
   .cards__item:nth-of-type(2n) {
@@ -803,6 +863,129 @@ select::-ms-expand {
   }
 }
 
+.only-md {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .only-md {
+    display: block;
+  }
+}
+.plan-table__inner {
+  width: 100%;
+  table-layout: fixed;
+}
+
+table.plan-table__inner {
+  border-spacing: 8px;
+}
+@media screen and (min-width: 1200px) {
+  table.plan-table__inner {
+    border-spacing: 12px;
+  }
+}
+
+.plan-table__header {
+  padding: 5px 15px;
+  background-color: #90C2DF;
+  border-right: 2px solid #90C2DF;
+  color: #fff;
+  text-align: center;
+  font-weight: normal;
+}
+@media screen and (min-width: 1200px) {
+  .plan-table__header {
+    padding: 13px 20px;
+  }
+}
+
+.plan-table__header-title {
+  font-size: 14px;
+  font-size: 0.875rem;
+  font-weight: 400;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+@media screen and (min-width: 1200px) {
+  .plan-table__header-title {
+    font-size: 1.125rem;
+  }
+}
+
+.plan-table__plan {
+  font-size: 30px;
+  font-size: 1.875rem;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.plan-table__plan-unit {
+  font-size: 16px;
+  font-size: 1rem;
+}
+
+.plan-table__body-title {
+  padding: 4px 4px;
+  text-align: center;
+  vertical-align: middle;
+  font-size: 14px;
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1.3;
+}
+@media screen and (min-width: 1200px) {
+  .plan-table__body-title {
+    padding: ypx 10px;
+    font-size: 1.125rem;
+  }
+}
+
+.plan-table__body-text {
+  padding: 4px 10px;
+  border: 2px solid #90C2DF;
+  text-align: center;
+  vertical-align: middle;
+  font-size: 20px;
+  font-size: 1.25rem;
+  font-weight: 400;
+  color: #90C2DF;
+  background: #FFF;
+}
+@media screen and (min-width: 1200px) {
+  .plan-table__body-text {
+    padding: 7px 20px;
+    font-size: 1.875rem;
+  }
+}
+
+.plan-table__body-text:last-child {
+  border-right: 2px solid #90C2DF;
+}
+
+.plan-table__body-row:last-child .plan-table__body-text {
+  border-bottom: 2px solid #90C2DF;
+}
+
+@media screen and (max-width: 600px) {
+  .plan-table {
+    overflow-x: auto;
+  }
+  .plan-table__inner {
+    width: auto;
+    white-space: nowrap;
+  }
+  .plan-table__body-title {
+    position: sticky;
+    left: 0;
+    background-color: #E7F6FF;
+    font-size: 0.875rem;
+  }
+}
+.plan-table__header:last-child {
+  border-right-width: 0;
+}
+
 .sub-title {
   font-size: 20px;
   font-weight: 500;
@@ -856,6 +1039,73 @@ select::-ms-expand {
       -ms-flex-pack: center;
           justify-content: center;
   line-height: 1;
+}
+
+.tooltip {
+  background: #FFF;
+  width: 170px;
+  height: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  border-radius: 6px;
+  position: relative;
+}
+.tooltip::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 10px 8px 0 8px;
+  border-color: #FFF transparent transparent transparent;
+}
+@media screen and (min-width: 1200px) {
+  .tooltip {
+    display: none;
+  }
+}
+
+.tooltip__text-wrap {
+  margin-left: 8px;
+}
+
+.tooltip,
+.tooltip__text_md,
+.tooltip__text_lg,
+.tooltip__text_sm,
+.tooltip__text_xs {
+  color: #90C2DF;
+}
+
+.tooltip {
+  font-size: 10px;
+}
+
+.tooltip__text_md {
+  font-size: 12px;
+}
+
+.tooltip__text_lg {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+span.tooltip__text_sm {
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.tooltip__text_xs {
+  font-size: 6px !important;
 }
 
 .main {
@@ -1001,5 +1251,38 @@ select::-ms-expand {
     text-align: center;
     margin-bottom: 61px;
   }
+}
+
+.service__cards {
+  margin-bottom: 66px;
+}
+@media screen and (min-width: 1200px) {
+  .service__cards {
+    margin-bottom: 100px;
+  }
+}
+
+.service-table__header {
+  position: relative;
+}
+
+.service__table-badge {
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.service__table-tooltip {
+  position: absolute;
+  top: -40px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.service-table__inner {
+  margin-top: 60px;
 }
 /*# sourceMappingURL=styles.css.map */

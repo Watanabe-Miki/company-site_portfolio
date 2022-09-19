@@ -115,13 +115,16 @@ $mediaquerys: (
 }
 
 .u-pc-down {
-  
+  display: block;
+
   @include mq('lg') {
     display: none;
   }
 }
 
 .u-pc {
+  display: none;
+  
   @include mq('lg') {
     display: block;
   }

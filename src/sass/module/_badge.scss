@@ -1,0 +1,42 @@
+@use "global" as *;
+.badge {
+  display: none;
+
+  @include mq('lg') {
+    width: 87px;
+    height: 87px;
+    border-radius: 100vh;
+    background: $color-bg-base;
+    font-size: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+
+.badge__text-wrap {
+  text-align: center;
+}
+
+.badge,
+.badge__text_md,
+.badge__text_lg,
+.badge__text_sm {
+  line-height: 1.2;
+  color: $color-main;
+}
+
+.badge__text_md {
+  font-size: 12px;
+}
+
+.badge__text_lg {
+  font-size: 20px;
+  font-weight: $font-bold;
+}
+
+.badge__text_sm {
+  font-size: 11px;
+  font-weight: $font-bold;
+}

@@ -2,11 +2,16 @@
 .cards {
   max-width: 500px;
   margin: 0 auto;
+  margin-bottom: -60px;
 
   @include mq('md') {
     max-width: 100%;
     display: flex;
     flex-wrap: wrap;
+  }
+
+  @include mq('lg') {
+    margin-bottom: -70px;
   }
 }
 
@@ -14,8 +19,8 @@
     margin-bottom: 60px;
 
   @include mq('md') {
-    width: calc(50% - 50px * 1 / 2);
-    margin-right: 50px;
+    width: calc(50% - 60px * 1 / 2);
+    margin-right: 60px;
     max-width: 100%;
   
     &:nth-of-type(2n) {

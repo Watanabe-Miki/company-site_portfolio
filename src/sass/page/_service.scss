@@ -68,3 +68,33 @@
     margin-bottom: 61px;
   }
 }
+
+.service__cards {
+  margin-bottom: 66px;
+
+  @include mq('lg') {
+    margin-bottom: 100px;
+  }
+}
+
+.service-table__header {
+  position: relative;
+}
+
+.service__table-badge {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translate(-50%, -50%);
+}
+
+.service__table-tooltip {
+  position: absolute;
+  top: -40px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.service-table__inner {
+  margin-top: 60px;
+}
