@@ -3,7 +3,6 @@
   display: none;
   
   @include mq('lg') { // lg以上でnav表示
-    
     display: block;
     height: $header-height-pc;
   }

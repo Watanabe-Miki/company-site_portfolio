@@ -1,6 +1,11 @@
 @use "global" as *;
 .contact {
   background: $color-bg-accent;
+  padding-bottom: 100px;
+
+  @include mq('lg') {
+    padding-bottom: 132px;
+  }
 }
 
 .contact__inner {
@@ -33,7 +38,6 @@
 }
 
 .contact__form {
-
 }
 .contact__footer {
   margin-bottom: 20px;

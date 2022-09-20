@@ -1,0 +1,39 @@
+@use "global" as *;
+.tel-footer {
+  display: flex;
+  align-items: flex-start;
+  
+  @include mq('lg') {
+    flex: none;
+  }
+}
+
+.tel-footer__title {
+  margin-right: 20px;
+}
+
+.tel-footer__icon {
+  width: 38px;
+  height: 38px;
+}
+
+.tel-footer__text {
+  font-size: 18px;
+  margin-bottom: 0;
+  margin-top: 3px;
+
+  @include mq('lg') {
+    font-size: 35px;
+    margin-bottom: 10px;
+  }
+}
+
+.tel-footer__text_sm {
+  font-size: 12px;
+  margin-left: 0;
+
+  @include mq('lg') {
+    font-size: 18px;
+  }
+}
+

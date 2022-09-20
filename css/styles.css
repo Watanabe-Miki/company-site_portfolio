@@ -510,6 +510,8 @@ select::-ms-expand {
   background: #FFF;
   border-radius: 20px;
   padding: 29px 15px 29px 15px;
+  -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, .16);
+          box-shadow: 0 3px 6px rgba(0, 0, 0, .16);
 }
 @media screen and (min-width: 1200px) {
   .contact-form {
@@ -1099,6 +1101,17 @@ input[type=email]:hover {
   }
 }
 
+/* footer用 */
+.logo_footer {
+  color: #FFFFFF;
+  font-size: 26px;
+}
+@media screen and (min-width: 1200px) {
+  .logo_footer {
+    font-size: 35px;
+  }
+}
+
 .overview__item {
   padding: 18px 0 18px 5px;
   border-bottom: 2px solid #90C2DF;
@@ -1256,6 +1269,11 @@ table.plan-table__inner {
 }
 .plan-table__header:last-child {
   border-right-width: 0;
+}
+
+.privacy {
+  width: 100%;
+  max-width: 100%;
 }
 
 .privacy__notice {
@@ -1431,6 +1449,53 @@ input[type=checkbox]:focus + .privacy__check-box::before {
   left: 0;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
+}
+
+.tel-footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+@media screen and (min-width: 1200px) {
+  .tel-footer {
+    -webkit-box-flex: 0;
+        -ms-flex: none;
+            flex: none;
+  }
+}
+
+.tel-footer__title {
+  margin-right: 20px;
+}
+
+.tel-footer__icon {
+  width: 38px;
+  height: 38px;
+}
+
+.tel-footer__text {
+  font-size: 18px;
+  margin-bottom: 0;
+  margin-top: 3px;
+}
+@media screen and (min-width: 1200px) {
+  .tel-footer__text {
+    font-size: 35px;
+    margin-bottom: 10px;
+  }
+}
+
+.tel-footer__text_sm {
+  font-size: 12px;
+  margin-left: 0;
+}
+@media screen and (min-width: 1200px) {
+  .tel-footer__text_sm {
+    font-size: 18px;
+  }
 }
 
 .title {
@@ -1812,6 +1877,12 @@ span.tooltip__text_sm {
 
 .contact {
   background: #E7F6FF;
+  padding-bottom: 100px;
+}
+@media screen and (min-width: 1200px) {
+  .contact {
+    padding-bottom: 132px;
+  }
 }
 
 .contact__inner {
@@ -1857,6 +1928,128 @@ span.tooltip__text_sm {
 
 .contact__submit-box {
   text-align: center;
+}
+
+.footer {
+  background: #90C2DF;
+  padding-top: 65px;
+  padding-bottom: 62px;
+}
+
+.footer__inner {
+  max-width: 500px;
+}
+@media screen and (min-width: 900px) {
+  .footer__inner {
+    max-width: 800px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .footer__inner {
+    max-width: 1210px;
+    padding-right: 25px;
+    padding-left: 25px;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .footer-wrap {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .footer-wrap {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+.footer__left {
+  /*   @include mq('lg') {
+      margin-right: auto;
+    }
+   */
+}
+@media screen and (min-width: 900px) {
+  .footer__left {
+    margin-right: auto;
+  }
+}
+
+.footer__logo {
+  margin-bottom: 30px;
+  text-align: center;
+}
+@media screen and (min-width: 900px) {
+  .footer__logo {
+    text-align: left;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .footer__logo {
+    margin-bottom: 40px;
+  }
+}
+
+.footer__address {
+  margin-bottom: 30px;
+  /*   @include mq('lg') {
+      margin-bottom: 40px;
+    }  
+   */
+}
+
+.footer-tel {
+  margin-bottom: 54px;
+}
+@media screen and (min-width: 1200px) {
+  .footer-tel {
+    margin-bottom: 40px;
+  }
+}
+
+/* footerナビゲーション */
+.footer-nav {
+  display: block;
+}
+@media screen and (min-width: 1200px) {
+  .footer-nav {
+    height: 18px;
+  }
+}
+
+.footer-nav__list {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+@media screen and (min-width: 1200px) {
+  .footer-nav__list {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+
+.footer-nav__item:not(:last-child) {
+  margin-bottom: 25px;
+}
+@media screen and (min-width: 1200px) {
+  .footer-nav__item:not(:last-child) {
+    margin-bottom: 0;
+    margin-right: 22px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .footer-nav__link {
+    line-height: 1;
+  }
 }
 
 .main {

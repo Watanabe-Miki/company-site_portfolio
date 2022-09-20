@@ -3,6 +3,7 @@
   background: $color-bg-base;
   border-radius: 20px;
   padding: 29px 15px 29px 15px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, .16);
   
   @include mq('lg') {
     padding: 100px 84px 30px 84px;

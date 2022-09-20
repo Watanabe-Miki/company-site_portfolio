@@ -11,3 +11,13 @@
     font-size: rem(30);
   }
 }
+
+/* footer用 */
+.logo_footer {
+  color: #FFFFFF;
+  font-size: 26px;
+
+  @include mq('lg') {
+    font-size: 35px;
+  }
+}

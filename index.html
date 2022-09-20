@@ -39,7 +39,7 @@
   <header class="header js-header">
     <div class="header__inner">
       <h1 class="header__logo logo"><a href="#">まき社会保険労務士事務所</a></h1>
-      <nav class="header-nav global-nav" aria-label="header">
+      <nav class="header-nav global-nav" aria-label="header" role="navigation">
         <ul class="global-nav__list">
           <li class="global-nav__item"><a class="global-nav__link js-global-nav__link" href="#service">サービス内容</a></li>
           <li class="global-nav__item"><a class="global-nav__link js-global-nav__link" href="#company">事務所案内</a></li>
@@ -536,6 +536,40 @@
       </form>
     </div><!-- inner -->
   </section>
+
+  <footer class="footer">
+    <div class="inner footer__inner">
+      <div class="footer-wrap">
+        <div class="footer__left">
+          <div class="footer__logo logo logo_footer"><a href="#">まき社会保険労務士事務所</a></div>
+          <div class="footer__address">
+            <p>〒700-0977</p>
+            <p>岡山県岡山市北区問屋町９−１０１<br class="u-sp">タイルビル3F</p>
+          </div><!-- footer__address -->
+        </div><!-- footer__left -->
+        <div class="footer__right">
+          <div class="footer-tel cta-tel tel-footer">
+            <p class="tel-footer__title u-pc-down">電話番号</p>
+            <a href="tel:086-250-2996" class="cta-tel__link">
+              <div class="cta-tel__content">
+                <img class="cta-tel__icon tel-footer__icon u-pc" src="./images/common/tel-icon.png" alt="電話番号 086-250-2996">
+                <p class="cta-tel__text tel-footer__text">086-250-2996</p>
+              </div>
+              <p class="cta-tel__text_sm tel-footer__text_sm">営業時間　9時～17時（土日祝除く）</p>
+            </a>
+          </div><!-- footer-tel -->
+          <nav class="global-nav footer-nav" aria-label="footer" role="navigation">
+            <ul class="global-nav__list footer-nav__list">
+              <li class="global-nav__item footer-nav__item"><a class="global-nav__link js-global-nav__link footer-nav__link" href="#">ホーム</a></li>
+              <li class="global-nav__item footer-nav__item"><a class="global-nav__link js-global-nav__link footer-nav__link" href="#service">サービス内容</a></li>
+              <li class="global-nav__item footer-nav__item"><a class="global-nav__link js-global-nav__link footer-nav__link" href="#company">事務所案内</a></li>
+              <li class="global-nav__item footer-nav__item"><a class="global-nav__link js-global-nav__link footer-nav__link" href="#access">アクセス</a></li>
+            </ul>
+          </nav><!-- footer-nav -->  
+        </div><!-- footer__right -->
+      </div><!-- footer-wrap -->
+    </div><!-- inner -->
+  </footer>
 <!-- JavaScript -->
   <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
   <script defer src="./js/script.js"></script>
