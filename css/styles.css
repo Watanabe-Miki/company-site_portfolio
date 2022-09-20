@@ -293,8 +293,8 @@ select::-ms-expand {
   width: 202px;
   width: 12.625rem;
   max-width: 100%;
-  padding: 17.5px 10px;
-  padding: 1.09375rem 0.625rem;
+  padding: 18.5px 10px;
+  padding: 1.15625rem 0.625rem;
   background-color: #90C2DF;
   color: #FFF;
   font-size: 18px;
@@ -307,6 +307,22 @@ select::-ms-expand {
   border: 1px solid currentColor;
   background-color: #fff;
   color: #90C2DF;
+}
+
+/* 色反転 */
+.btn_blue {
+  background: #FFF;
+  color: #90C2DF;
+  border: 1px solid currentColor;
+  width: 227px;
+  width: 14.1875rem;
+  font-size: 16px;
+  font-size: 1rem;
+}
+.btn_blue:focus, .btn_blue:hover {
+  border: 1px solid transparent;
+  background-color: #90C2DF;
+  color: #FFF;
 }
 
 .card__head {
@@ -488,6 +504,127 @@ select::-ms-expand {
   .cards__item:nth-of-type(3n) {
     margin-right: 0;
   }
+}
+
+.contact-form {
+  background: #FFF;
+  border-radius: 20px;
+  padding: 29px 15px 29px 15px;
+}
+@media screen and (min-width: 1200px) {
+  .contact-form {
+    padding: 100px 84px 30px 84px;
+  }
+}
+
+/* 各入力欄のスタイル */
+textarea {
+  width: 100%;
+  border: 1px solid #3F3F3F;
+  font-size: 16px;
+  padding: 0.7em 0.5em;
+  height: 150px;
+  resize: none;
+}
+@media screen and (min-width: 1200px) {
+  textarea {
+    font-size: 20px;
+  }
+}
+textarea:focus, textarea:hover {
+  -webkit-box-shadow: 0 0 0.25rem rgba(144, 194, 223, .5), inset 0 0 0.25rem rgba(144, 194, 223, .5);
+          box-shadow: 0 0 0.25rem rgba(144, 194, 223, .5), inset 0 0 0.25rem rgba(144, 194, 223, .5);
+  -webkit-transition: all 0.5s ease 0s;
+  transition: all 0.5s ease 0s;
+  border: 1px solid #90C2DF;
+}
+
+input[type=text],
+input[type=tel],
+input[type=email] {
+  width: 100%;
+  border: 1px solid #3F3F3F;
+  font-size: 16px;
+  padding: 0.32em 0.5em;
+}
+@media screen and (min-width: 1200px) {
+  input[type=text],
+input[type=tel],
+input[type=email] {
+    font-size: 20px;
+    padding: 0.6em 0.5em;
+  }
+}
+input[type=text]:focus, input[type=text]:hover,
+input[type=tel]:focus,
+input[type=tel]:hover,
+input[type=email]:focus,
+input[type=email]:hover {
+  -webkit-box-shadow: 0 0 0.25rem rgba(144, 194, 223, .5), inset 0 0 0.25rem rgba(144, 194, 223, .5);
+          box-shadow: 0 0 0.25rem rgba(144, 194, 223, .5), inset 0 0 0.25rem rgba(144, 194, 223, .5);
+  -webkit-transition: all 0.5s ease 0s;
+  transition: all 0.5s ease 0s;
+  border: 1px solid #90C2DF;
+}
+
+.contact-form__list {
+  margin-bottom: 22px;
+}
+@media screen and (min-width: 1200px) {
+  .contact-form__list {
+    margin-bottom: 27px;
+  }
+}
+
+.contact-form__item:not(:last-of-type) {
+  margin-bottom: 21px;
+}
+@media screen and (min-width: 1200px) {
+  .contact-form__item:not(:last-of-type) {
+    margin-bottom: 27.8px;
+  }
+}
+
+.contact-form__item-title {
+  margin-bottom: 10px;
+}
+@media screen and (min-width: 1200px) {
+  .contact-form__item-title {
+    margin-bottom: 7.7px;
+    font-size: 18px;
+  }
+}
+
+.contact-form__item-inline {
+  margin-left: 23px;
+  vertical-align: 2px;
+}
+@media screen and (min-width: 1200px) {
+  .contact-form__item-inline {
+    vertical-align: 3.5px;
+  }
+}
+
+/* placeholder文字色 */
+::-webkit-input-placeholder {
+  color: #E4E4E4;
+}
+::-moz-placeholder {
+  color: #E4E4E4;
+}
+::-ms-input-placeholder {
+  color: #E4E4E4;
+}
+::placeholder {
+  color: #E4E4E4;
+}
+
+::-ms-input-placeholder {
+  color: #E4E4E4;
+}
+
+:-ms-input-placeholder {
+  color: #E4E4E4;
 }
 
 /* 電話発信の指定 */
@@ -925,6 +1062,16 @@ select::-ms-expand {
   letter-spacing: -0.03em;
 }
 
+.label-r {
+  display: inline-block;
+  padding: 0.25em 0.9em;
+  border-radius: 100vh;
+  background-color: #FF0000;
+  color: #FFF;
+  font-size: 11px;
+  font-size: 0.6875rem;
+}
+
 .label {
   display: inline-block;
   padding: 0.6em 0.6em;
@@ -1111,6 +1258,119 @@ table.plan-table__inner {
   border-right-width: 0;
 }
 
+.privacy__notice {
+  font-size: 12px;
+  font-weight: 700;
+}
+@media screen and (min-width: 1200px) {
+  .privacy__notice {
+    font-size: 14px;
+    font-weight: 700;
+  }
+}
+
+.privacy__content {
+  border: 1px solid #707070;
+  width: 100%;
+  height: 131px;
+  overflow-y: scroll;
+  font-size: 14px;
+  margin-bottom: 17px;
+}
+
+/* チェックボックス */
+.privacy__check {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.privacy__check-wrap {
+  height: 24px;
+}
+
+/* デフォルトのスタイルを消す */
+.privacy__check-input {
+  opacity: 0;
+}
+.privacy__check-input:checked + span::after {
+  opacity: 1;
+}
+
+/* 新たにスタイルを指定 */
+.privacy__check-box {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  position: relative;
+  /* チェックボックスの枠 */
+  /* チェックボックスの✓マーク */
+}
+.privacy__check-box::before {
+  -webkit-transform: translateY(-50%);
+  background: #fff;
+  border: 1px solid #707070;
+  border-radius: 7px;
+  content: "";
+  display: block;
+  width: 24px;
+  height: 24px;
+  left: 0;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.privacy__check-box::after {
+  -webkit-transform: translateY(-50%) rotate(-45deg);
+  border-bottom: 2px solid #90C2DF;
+  border-left: 2px solid #90C2DF;
+  content: "";
+  display: block;
+  width: 1.1319em;
+  height: 0.6em;
+  left: 2px;
+  margin-top: -0.2em;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%) rotate(-45deg);
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+
+/* hover,focus時のスタイル */
+input[type=checkbox]:hover + .privacy__check-box::before {
+  -webkit-box-shadow: 0 0 4px rgba(144, 194, 223, .5), inset 0 0 4px rgba(71, 114, 255, .5);
+          box-shadow: 0 0 4px rgba(144, 194, 223, .5), inset 0 0 4px rgba(71, 114, 255, .5);
+  border: 1px solid #90C2DF;
+  -webkit-transition: all 0.5s ease 0s;
+  transition: all 0.5s ease 0s;
+}
+
+input[type=checkbox]:focus + .privacy__check-box::before {
+  -webkit-box-shadow: 0 0 4px rgba(144, 194, 223, .5), inset 0 0 4px rgba(144, 194, 223, .5);
+          box-shadow: 0 0 4px rgba(144, 194, 223, .5), inset 0 0 4px rgba(144, 194, 223, .5);
+  border: 1px solid #90C2DF;
+  -webkit-transition: all 0.5s ease 0s;
+  transition: all 0.5s ease 0s;
+}
+
+.privacy__text-wrap {
+  -ms-flex-item-align: center;
+      align-self: center;
+  margin-left: 9px;
+}
+
+.privacy__text {
+  line-height: 1;
+  font-size: 14px;
+  font-weight: 700;
+}
+
 .shine {
   position: relative;
   overflow: hidden;
@@ -1276,8 +1536,116 @@ span.tooltip__text_sm {
   font-size: 6px !important;
 }
 
+.access {
+  margin-bottom: 74px;
+}
+@media screen and (min-width: 1200px) {
+  .access {
+    margin-bottom: 45px;
+  }
+}
+
+.access__inner {
+  max-width: 500px;
+}
+@media screen and (min-width: 768px) {
+  .access__inner {
+    max-width: 800px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .access__inner {
+    max-width: 100%;
+    width: 987px;
+  }
+}
+
+.access__title {
+  margin-bottom: 50px;
+}
+@media screen and (min-width: 1200px) {
+  .access__title {
+    margin-bottom: 60px;
+  }
+}
+
+.access-wrap {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0;
+}
+@media screen and (min-width: 1200px) {
+  .access-wrap {
+    grid-template-columns: 560px 1fr;
+    grid-template-rows: auto 1fr;
+    -webkit-column-gap: 26px;
+       -moz-column-gap: 26px;
+            column-gap: 26px;
+  }
+}
+
+.access__map {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 560px;
+          flex: 0 1 560px;
+  height: 260px;
+  margin-bottom: 26px;
+}
+@media screen and (min-width: 768px) {
+  .access__map {
+    height: 426px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .access__map {
+    margin-bottom: 0;
+    grid-area: 1/1/2/2;
+  }
+}
+.access__map iframe {
+  width: 100%;
+  height: 100%;
+}
+
+@media screen and (min-width: 1200px) {
+  .access__address {
+    grid-area: 1/2/2/3;
+    margin-top: 25px;
+  }
+}
+
+.access__address-content {
+  margin-bottom: 30px;
+}
+
+.access__address-row:not(:last-of-type) {
+  margin-bottom: 20px;
+}
+@media screen and (min-width: 1200px) {
+  .access__address-row:not(:last-of-type) {
+    margin-bottom: 30px;
+  }
+}
+.access__address-row dd {
+  color: #8FC2DF;
+}
+.access__link-box {
+  text-align: center;
+}
+@media screen and (min-width: 1200px) {
+  .access__link-box {
+    text-align: left;
+  }
+}
+
 .company {
   margin-bottom: 100px;
+  margin-top: 217px;
+}
+@media screen and (min-width: 1200px) {
+  .company {
+    margin-bottom: 97px;
+  }
 }
 
 .company__inner {
@@ -1398,7 +1766,7 @@ span.tooltip__text_sm {
   .company-wrap_foot {
     gap: 0;
     grid-template-columns: 734px 373px;
-    grid-template-rows: 1fr 430px;
+    grid-template-rows: 1fr;
   }
 }
 
@@ -1440,6 +1808,55 @@ span.tooltip__text_sm {
     margin: 0;
     margin-left: auto;
   }
+}
+
+.contact {
+  background: #E7F6FF;
+}
+
+.contact__inner {
+  max-width: 500px;
+}
+@media screen and (min-width: 768px) {
+  .contact__inner {
+    max-width: 800px;
+    padding-right: 25px;
+    padding-left: 25px;
+  }
+}
+
+.contact__title {
+  margin-bottom: 34px;
+}
+@media screen and (min-width: 1200px) {
+  .contact__title {
+    margin-bottom: 30px;
+  }
+}
+
+.contact__notice {
+  font-size: 18px;
+  line-height: 1.5;
+  margin-bottom: 65px;
+  text-align: center;
+}
+@media screen and (min-width: 1200px) {
+  .contact__notice {
+    margin-bottom: 70px;
+  }
+}
+
+.contact__footer {
+  margin-bottom: 20px;
+}
+@media screen and (min-width: 1200px) {
+  .contact__footer {
+    margin-bottom: 50px;
+  }
+}
+
+.contact__submit-box {
+  text-align: center;
 }
 
 .main {
@@ -1511,9 +1928,8 @@ span.tooltip__text_sm {
 }
 
 .service {
-  background: #E7F6FF;
   padding-top: 106px;
-  margin-bottom: 86px;
+  position: relative;
 }
 @media screen and (min-width: 1200px) {
   .service {
@@ -1521,15 +1937,19 @@ span.tooltip__text_sm {
     margin-bottom: 53px;
   }
 }
-
-.service__bg {
-  background: url(../../../images/service/service-bg_sp.png) no-repeat center center/cover;
+.service::before {
+  background: url(../../../images/service/service-bg_sp.png) no-repeat top center/cover;
+  content: "";
   width: 100%;
-}
-@media screen and (min-width: 1200px) {
-  .service__bg {
-    background: url(../../../images/service/service-bg_pc.png) no-repeat center center/cover;
-  }
+  height: 107%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  z-index: -1;
 }
 
 @media screen and (min-width: 768px) {

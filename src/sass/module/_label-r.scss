@@ -1,0 +1,9 @@
+@use "global" as *;
+.label-r {
+	display: inline-block;
+	padding: .25em .9em;
+  border-radius: 100vh;
+	background-color: #FF0000;
+	color: #FFF;
+	font-size: rem(11);
+}

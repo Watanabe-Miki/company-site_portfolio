@@ -1,0 +1,111 @@
+@use "global" as *;
+.privacy {
+
+}
+
+.privacy__notice {
+  font-size: 12px;
+  font-weight: $font-bold;
+  
+  @include mq('lg') {
+    font-size: 14px;
+    font-weight: $font-bold;
+  }
+}
+
+.privacy__content {
+  border: 1px solid #707070;
+  width: 100%;
+  height: 131px;
+  overflow-y: scroll;
+  font-size: 14px;
+  margin-bottom: 17px;
+}
+
+/* チェックボックス */
+.privacy__check {
+  display: flex;
+  justify-content: center;
+}
+
+.privacy__check-wrap {
+  height: 24px;
+}
+
+/* デフォルトのスタイルを消す */
+.privacy__check-input {
+    opacity: 0;
+
+    &:checked + span::after {
+    opacity: 1;
+  }
+}
+
+/* 新たにスタイルを指定 */
+.privacy__check-box {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  position: relative;
+
+      /* チェックボックスの枠 */
+    &::before {
+      -webkit-transform: translateY(-50%);
+      background: #fff;
+      border: 1px solid #707070;
+      border-radius: 7px;
+      content: "";
+      display: block;
+      width: 24px;
+      height: 24px;
+      left: 0;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    
+    /* チェックボックスの✓マーク */
+    &::after {
+      -webkit-transform: translateY(-50%) rotate(-45deg);
+      border-bottom: 2px solid $color-main;
+      border-left: 2px solid $color-main;
+      content: "";
+      display: block;
+      width: 1.1319em;
+      height: 0.6em;
+      left: 2px;
+      margin-top: -0.2em;
+      opacity: 0;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%) rotate(-45deg);
+      transition: all 0.3s ease 0s;
+        
+    }
+}
+
+/* hover,focus時のスタイル */
+input[type="checkbox"]:hover + .privacy__check-box::before {
+  box-shadow: 0 0 4px rgba(144, 194, 223, 0.5), inset 0 0 4px rgba(71, 114, 255, 0.5);
+  border: 1px solid $color-main;
+  transition: all 0.5s ease 0s;
+}
+
+input[type="checkbox"]:focus + .privacy__check-box::before {
+  box-shadow: 0 0 4px rgba(144, 194, 223, 0.5), inset 0 0 4px rgba(144, 194, 223, 0.5);
+  border: 1px solid $color-main;
+  transition: all 0.5s ease 0s;
+}
+
+
+.privacy__text-wrap {
+  align-self: center;
+  margin-left: 9px;
+}
+
+.privacy__text {
+  line-height: 1;
+  font-size: 14px;
+  font-weight: $font-bold;
+}

@@ -3,7 +3,7 @@
 	display: inline-block;
 	width: rem(202);
 	max-width: 100%;
-	padding: rem(17.5) rem(10);
+	padding: rem(18.5) rem(10);
 	background-color: $color-main;
 	color: #FFF;
 	font-size: rem(18);
@@ -16,5 +16,21 @@
 		border: 1px solid currentColor;
 		background-color: #fff;
 		color: $color-main;
+	}
+}
+
+/* 色反転 */
+.btn_blue {
+	background: $color-bg-base;
+	color: $color-main;
+	border: 1px solid currentColor;
+	width: rem(227);
+	font-size: rem(16);
+
+	&:focus,
+	&:hover {
+		border: 1px solid transparent;
+		background-color: $color-main;
+		color: $color-bg-base;
 	}
 }

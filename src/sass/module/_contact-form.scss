@@ -1,0 +1,105 @@
+@use "global" as *;
+.contact-form {
+  background: $color-bg-base;
+  border-radius: 20px;
+  padding: 29px 15px 29px 15px;
+  
+  @include mq('lg') {
+    padding: 100px 84px 30px 84px;
+  }
+}
+
+/* 各入力欄のスタイル */
+textarea {
+  width: 100%;
+  border: 1px solid $color-text-base;
+  font-size: 16px;
+  padding: 0.7em 0.5em;
+  height: 150px;
+  resize: none;
+
+  @include mq('lg') {
+    font-size: 20px;
+  }
+
+  &:focus,
+  &:hover {
+      box-shadow: 0 0 rem(4) rgba(144, 194, 223, 0.5), inset 0 0 rem(4) rgba(144, 194, 223, 0.5);
+      transition: all 0.5s ease 0s;
+      border: 1px solid $color-main;
+  }
+}
+
+input[type="text"],
+input[type="tel"],
+input[type="email"] {
+    width: 100%;
+    border: 1px solid $color-text-base;
+    font-size: 16px;//何も書かないと小さくなる
+    padding: 0.32em 0.5em;
+    
+    @include mq('lg') {
+      font-size: 20px;
+      padding: 0.6em 0.5em;
+    }  
+
+  &:focus,
+  &:hover {
+      box-shadow: 0 0 rem(4) rgba(144, 194, 223, 0.5), inset 0 0 rem(4) rgba(144, 194, 223, 0.5);
+      transition: all 0.5s ease 0s;
+      border: 1px solid $color-main;
+  }  
+}
+
+.contact-form__list {
+  margin-bottom: 22px;
+
+  @include mq('lg') {
+    margin-bottom: 27px;
+  }
+} 
+
+.contact-form__item {
+  &:not(:last-of-type) {
+    margin-bottom: 21px;
+
+    @include mq('lg') {
+      margin-bottom: 27.8px;
+    }
+  }
+}
+
+.contact-form__item-title {
+  margin-bottom: 10px;
+
+  @include mq('lg') {
+    margin-bottom: 7.7px;
+    font-size: 18px;
+  }
+}
+
+.contact-form__item-inline {
+  margin-left: 23px;
+  vertical-align: 2px;
+
+  @include mq('lg') {
+    vertical-align: 3.5px;
+  }
+}
+
+.contact-form__item-input {
+  
+}
+
+/* placeholder文字色 */
+::placeholder {
+  color: #E4E4E4;
+}
+// 旧Edge対応
+::-ms-input-placeholder {
+  color: #E4E4E4;
+}
+// IE対応
+:-ms-input-placeholder {
+  color: #E4E4E4;
+}

@@ -1,0 +1,52 @@
+@use "global" as *;
+.contact {
+  background: $color-bg-accent;
+}
+
+.contact__inner {
+  max-width: 500px;
+
+  @include mq('md') {
+    max-width: 800px;
+    padding-right: $padding-pc;
+    padding-left: $padding-pc;
+  }
+}
+
+.contact__title {
+  margin-bottom: 34px;
+
+  @include mq('lg') {
+    margin-bottom: 30px;
+  }
+}
+
+.contact__notice {
+  font-size: 18px;
+  line-height: 1.5;
+  margin-bottom: 65px;
+  text-align: center;
+
+  @include mq('lg') {
+    margin-bottom: 70px;
+  }
+}
+
+.contact__form {
+
+}
+.contact__footer {
+  margin-bottom: 20px;
+
+  @include mq('lg') {
+    margin-bottom: 50px;
+  }
+}
+
+.contact__submit-box {
+  text-align: center;
+}
+
+.contact__submit {
+
+}

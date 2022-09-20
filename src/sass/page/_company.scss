@@ -1,6 +1,11 @@
 @use "global" as *;
 .company {
   margin-bottom: 100px;
+  margin-top: 217px;
+
+  @include mq('lg') {
+    margin-bottom: 97px;
+  }
 }
 
 .company__inner {
@@ -109,7 +114,7 @@
 
   @include mq('lg') {
     gap: 0;
-    grid-template-columns: 734px 373px;     grid-template-rows: 1fr 430px;
+    grid-template-columns: 734px 373px;     grid-template-rows: 1fr;
   }
 }
 
