@@ -1,11 +1,9 @@
 @use "global" as *;
 .tooltip {
   background: $color-bg-base;
-  width: 170px;
+  width: 140px;
   height: 30px;
-  display: flex;
-  align-items: center;
-  text-align: center;
+  padding: 2px 5px 5px 8px;
   border-radius: 6px;
   position: relative;
 
@@ -29,18 +27,21 @@
 }
 
 .tooltip__text-wrap {
-  margin-left: 8px;
+  display: flex;
+  align-items: baseline;
 }
 
-.tooltip,
+
 .tooltip__text_md,
 .tooltip__text_lg,
 .tooltip__text_sm, 
-.tooltip__text_xs {
+.tooltip__text_xs, 
+.tooltip__text_xxs {
   color: $color-main;
+  line-height: 1;
 }
 
-.tooltip {
+.tooltip__text_xs {
   font-size: 10px;
 }
 
@@ -58,6 +59,12 @@ span.tooltip__text_sm {
   font-weight: $font-bold;
 }
 
-.tooltip__text_xs {
-  font-size: 6px !important;
+.tooltip__text_xxs {
+  font-size: 10px !important;
+  display: block;
+  transform: scale(0.6);
+  transform-origin: 0 0;
+  position: absolute;
+  top: 58%;
+  right: -21px;
 }

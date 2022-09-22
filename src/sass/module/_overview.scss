@@ -7,11 +7,11 @@
   border-bottom: 2px solid $color-main;
   
   @include mq('md') {
-    padding: 14px 0 14px 5px;   
+    padding: 14px 0 14px 91px;   
   }
   
   @include mq('lg') {
-    padding: 12px 0 12px 5px;    
+    padding: 12px 0 12px 91px;    
   }
 }
 
@@ -34,9 +34,12 @@
   dd {
     width: calc(100% - 30%);
   }
+}
 
-  dd p {
+.overview__item-text_sm {
+  font-size: 12px;
 
+  @include mq('lg') {
+    font-size: 14px;
   }
-
 }

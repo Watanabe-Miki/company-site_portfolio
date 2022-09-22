@@ -29,9 +29,14 @@ table.plan-table__inner {
   color: #fff;
   text-align: center;
   font-weight: normal;
-
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  
   @include mq('lg') {
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
     padding: 13px 20px;
+    width: 292px;
   }
 }
 

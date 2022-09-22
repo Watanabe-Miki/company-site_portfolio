@@ -98,19 +98,25 @@
 .card__content {
   margin-bottom: 10px;
 
+
   @include mq('lg') {
-    margin-bottom: 22px;
+    margin-bottom:14px;
   }
 }
 
+.card__body > *:last-child {
+  margin-bottom: 0;
+}
+
+
 .card__text {
-  line-height: 1.8;
+  line-height: 1.87;
 }
 
 .card__content_ex {
   border: 1px dashed $color-main;
   width: 100%;
-  padding: 9px 7px;
+  padding: 7px;
 }
 
 .card__content_ex-text {

@@ -58,7 +58,7 @@
   max-width: 500px;
 
   @include mq('md') {
-    max-width: 800px;
+    max-width: 850px;
     padding-right: $padding-pc;
     padding-left: $padding-pc;
   }
@@ -80,7 +80,7 @@
   letter-spacing: -.05em;
 
   @include mq('lg') {
-    margin-bottom: 70px;
+    margin-bottom: 56px;
   }
 }
 

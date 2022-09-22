@@ -1,10 +1,11 @@
 @use "global" as *;
 .company {
   margin-bottom: 100px;
-  margin-top: 217px;
+  margin-top: 218px;
 
   @include mq('lg') {
-    margin-bottom: 97px;
+    margin-bottom: 89px;
+    margin-top: 254px;
   }
 }
 
@@ -30,7 +31,7 @@
   margin-bottom: 30px;
 
   @include mq('lg') {
-    margin-bottom: 42px;
+    margin-bottom: 25px;
   }
 }
 
@@ -44,14 +45,15 @@
     grid-template-columns: 400px 1fr;
     gap: 45px;
     margin-left: 5.25862%;
+    margin-bottom: 97px;
   }
 }
 
 .company__img {
   position: relative;
 
-  @include mq('md') {
-    margin-top: 20px;
+  @include mq('lg') {
+    margin-top: -44px;
   }
   
   img {
@@ -107,6 +109,10 @@
   }
 }
 
+.company__img_head {
+  margin-top: 19px;
+}
+
 .company-wrap_foot {
   display: grid;
   grid-template-columns: 1fr;
@@ -119,18 +125,17 @@
 }
 
 .company-greeting {
-  margin-bottom: 30px;
 
   @include mq('md') {
-    margin-bottom: 0;
     background: $color-bg-accent;
     border-radius: 38px;
     padding: 60px;
-    margin-top: 60px;
   }
   
   @include mq('lg') {
     margin-left: 18px;
+    margin-top: 16px;
+    padding: 56px;
   }
 }
 

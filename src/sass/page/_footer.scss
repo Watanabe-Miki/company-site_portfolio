@@ -3,6 +3,10 @@
   background: $color-main;
   padding-top: 65px;
   padding-bottom: 62px;
+
+  @include mq('lg') {
+    padding-top: 52px;
+  }
 }
 
 .footer__inner {
@@ -51,7 +55,7 @@
   
   @include mq('lg') {
     text-align: left;
-    margin-bottom: 40px;
+    margin-bottom: 27px;
   }
 }
 
