@@ -59,10 +59,11 @@
 
 .header-tel {
 	display: none;
-	margin-left: auto;
-
+	
 	@include mq('lg') {
 		display: block;
+		margin-left: auto;
+		margin-right: 20px;
 	}
 }
 

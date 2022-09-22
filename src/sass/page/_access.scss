@@ -82,17 +82,8 @@
     }
   }
 
-  dd,
-  dt {
-
-  }
-
   dd {
     color: #8FC2DF;
-  }
-
-  dt {
-
   }
 }
 
@@ -102,4 +93,9 @@
   @include mq('lg') {
     text-align: left;
   }
+}
+
+/* ボタンの大きさの指定 */
+.access__link {
+  width: 227px;
 }

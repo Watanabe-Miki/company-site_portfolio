@@ -79,6 +79,8 @@ $mediaquerys: (
 // 非表示
 
 .u-sp {
+  display: block;
+
   @include mq('sm') {
     display: none;
   }
@@ -93,7 +95,8 @@ $mediaquerys: (
 }
 
 .u-tab-down {
-  display: none;
+  display: block;
+
   @include mq('md') {
     display: none;
   }
@@ -111,6 +114,7 @@ $mediaquerys: (
 }
 
 .u-tab-up {
+  
   @include mq('md') {
     display: block;
   }

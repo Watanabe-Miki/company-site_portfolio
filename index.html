@@ -427,114 +427,116 @@
   </section>
 
   <section id="contact" class="contact">
-    <div class="inner contact__inner">
-      <h3 class="title contact__title">お問い合わせ</h3>
-      <div class="contact__notice">
-        <p>ご質問、ご相談は以下のフォームより<br class="u-sp">お送りください。<br>内容確認後、すみやかにご返信いたします。</p>
-      </div>
-      <form id="js-form" action="" method="post" class="contact-form contact__form">
-        <div class="contact-form__list">
-          <dl class="contact-form__item">
-            <dt class="contact-form__item-title">
-              <label for="yourcompany">
-                貴社名<span class="label-r contact-form__item-inline">必須</span>
+    <div class="contact__bg-wrap">
+      <div class="inner contact__inner">
+        <h3 class="title contact__title">お問い合わせ</h3>
+        <div class="contact__notice">
+          <p>ご質問、ご相談は以下のフォームより<br class="u-sp">お送りください。<br>内容確認後、すみやかにご返信いたします。</p>
+        </div>
+        <form id="js-form" action="" method="post" class="contact-form contact__form">
+          <div class="contact-form__list">
+            <dl class="contact-form__item">
+              <dt class="contact-form__item-title">
+                <label for="yourcompany">
+                  貴社名<span class="label-r contact-form__item-inline">必須</span>
+                </label>
+              </dt>
+              <dd class="contact-form__item-input">
+                  <input id="yourcompany" type="text" name="yourcompany" placeholder="株式会社○○">
+              </dd>
+            </dl><!-- contact-form__item -->
+            <dl class="contact-form__item">
+              <dt class="contact-form__item-title">
+                <label for="yourname">
+                    お名前<span class="label-r contact-form__item-inline">必須</span>
+                </label>
+              </dt>
+              <dd class="contact-form__item-input">
+                <input id="yourname" class="js-require" type="text" name="yourname" placeholder="例：田中　太郎" required>
+              </dd>
+            </dl><!-- contact-form__item -->
+            <dl class="contact-form__item">
+              <dt class="contact-form__item-title">
+                <label for="yourname_kana">
+                  フリガナ<span class="label-r contact-form__item-inline">必須</span>
+                </label>
+              </dt>
+              <dd class="contact-form__item-input">
+                <input id="yourname_kana" class="js-require" type="text" name="yourname_kana" placeholder="例：タナカ　タロウ" required>
+              </dd>
+            </dl><!-- contact-form__item -->
+            <dl class="contact-form__item">
+              <dt class="contact-form__item-title">
+                <label for="email">
+                  メールアドレス<span class="label-r contact-form__item-inline">必須</span>
+                </label>
+              </dt>
+              <dd class="contact-form__item-input">
+                <input class="js-require" id="email" type="email" name="email" placeholder="例：XXXXXX@oooo.com" required>
+              </dd>
+            </dl><!-- contact-form__item -->
+            <dl class="contact-form__item">
+              <dt class="contact-form__item-title">
+                  <label for="yourtel">電話番号</label>
+              </dt>
+              <dd class="contact-form__item-input">
+                  <input id="yourtel" type="tel" name="yourtel" placeholder="例：090-1234-5678">
+              </dd>
+            </dl><!-- contact-form__item -->
+            <dl class="contact-form__item">
+              <dt class="contact-form__item-title">
+                  <label for="youraddress">ご住所</label>
+              </dt>
+              <dd class="contact-form__item-input">
+                  <input id="youraddress" type="text" name="youraddress" placeholder="例：岡山県岡山市北区1-1">
+              </dd>
+            </dl><!-- contact-form__item -->
+            <dl class="contact-form__item">
+              <dt class="contact-form__item-title">
+                <label for="comment">
+                    お問い合わせ内容<span class="label-r contact-form__item-inline">必須</span>
+                </label>
+              </dt>
+              <dd class="contact-form__item-input">
+                <textarea id="comment" class="js-require" name="comment" placeholder="お問い合わせ内容を記入してください。" required></textarea>
+              </dd>
+            </dl><!-- contact-form__item -->
+          </div><!-- contact-form__list -->
+          <div class="privacy contact__footer">
+            <div class="privacy__notice">
+              <p>プライバシーポリシー<br>お客様個人に関する情報（以下「個人情報」といいます）を適切に保護することを社会的責務と考え、下記の方針に基づき、その保護を徹底してまいります。</p>
+            </div><!-- privacy__notice -->
+            <div class="privacy__content">
+              <ul>
+                <li>１．お客様の個人情報を取得させていただく場合は、利用目的をできる限り特定するとともに、適法かつ公正な手段で必要な範囲の個人情報を取得させていただきます。</li>
+                <li>２．お客様からお預かりした個人情報の利用目的は以下のとおりです。
+                  <ul>
+                    <li>・予約・またはサービス内容の確認、受け渡し</li>
+                    <li>・お問い合わせの返事、ご連絡など</li>
+                  </ul>
+                </li>
+                <li>３．お客様より取得させていただいた個人情報は適切に管理し、法律に基づき必要と判断される場合を除き、お客様の同意を得た第三者以外への提供、開示等一切いたしません。 </li>
+                <li>４．お客様よりお預かりした個人情報の安全管理は合理的・組織的・物理的・技術的施策を講じるとともに、関連法令に準じた適切な取り扱いを行うことで個人情報への不正な侵入・紛失・改ざん・漏えい等の危険防止に努めます。</li>
+                <li>５．個人情報について、開示・訂正・利用停止・削除などの要求がある場合には、本人からの要求であることが確認できた場合に限り、法令に従って対応します。</li>
+              </ul>
+            </div><!-- privacy__content -->
+            <div class="privacy__check">
+              <!-- チェックボックス -->
+              <label for="form-privacy" class="privacy__check-wrap">
+                <input id="form-privacy" class="privacy__check-input" type="checkbox" name="yourcheck" value="">
+                <span class="privacy__check-box"></span>
               </label>
-            </dt>
-            <dd class="contact-form__item-input">
-                <input id="yourcompany" type="text" name="yourcompany" placeholder="株式会社○○">
-            </dd>
-          </dl><!-- contact-form__item -->
-          <dl class="contact-form__item">
-            <dt class="contact-form__item-title">
-              <label for="yourname">
-                  お名前<span class="label-r contact-form__item-inline">必須</span>
-              </label>
-            </dt>
-            <dd class="contact-form__item-input">
-              <input id="yourname" class="js-require" type="text" name="yourname" placeholder="例：田中　太郎" required>
-            </dd>
-          </dl><!-- contact-form__item -->
-          <dl class="contact-form__item">
-            <dt class="contact-form__item-title">
-              <label for="yourname_kana">
-                フリガナ<span class="label-r contact-form__item-inline">必須</span>
-              </label>
-            </dt>
-            <dd class="contact-form__item-input">
-              <input id="yourname_kana" class="js-require" type="text" name="yourname_kana" placeholder="例：タナカ　タロウ" required>
-            </dd>
-          </dl><!-- contact-form__item -->
-          <dl class="contact-form__item">
-            <dt class="contact-form__item-title">
-              <label for="email">
-                メールアドレス<span class="label-r contact-form__item-inline">必須</span>
-              </label>
-            </dt>
-            <dd class="contact-form__item-input">
-              <input class="js-require" id="email" type="email" name="email" placeholder="例：XXXXXX@oooo.com" required>
-            </dd>
-          </dl><!-- contact-form__item -->
-          <dl class="contact-form__item">
-            <dt class="contact-form__item-title">
-                <label for="yourtel">電話番号</label>
-            </dt>
-            <dd class="contact-form__item-input">
-                <input id="yourtel" type="tel" name="yourtel" placeholder="例：090-1234-5678">
-            </dd>
-          </dl><!-- contact-form__item -->
-          <dl class="contact-form__item">
-            <dt class="contact-form__item-title">
-                <label for="youraddress">ご住所</label>
-            </dt>
-            <dd class="contact-form__item-input">
-                <input id="youraddress" type="text" name="youraddress" placeholder="例：岡山県岡山市北区1-1">
-            </dd>
-          </dl><!-- contact-form__item -->
-          <dl class="contact-form__item">
-            <dt class="contact-form__item-title">
-              <label for="comment">
-                  お問い合わせ内容<span class="label-r contact-form__item-inline">必須</span>
-              </label>
-            </dt>
-            <dd class="contact-form__item-input">
-              <textarea id="comment" class="js-require" name="comment" placeholder="お問い合わせ内容を記入してください。" required></textarea>
-            </dd>
-          </dl><!-- contact-form__item -->
-        </div><!-- contact-form__list -->
-        <div class="privacy contact__footer">
-          <div class="privacy__notice">
-            <p>プライバシーポリシー<br>お客様個人に関する情報（以下「個人情報」といいます）を適切に保護することを社会的責務と考え、下記の方針に基づき、その保護を徹底してまいります。</p>
-          </div><!-- privacy__notice -->
-          <div class="privacy__content">
-            <ul>
-              <li>１．お客様の個人情報を取得させていただく場合は、利用目的をできる限り特定するとともに、適法かつ公正な手段で必要な範囲の個人情報を取得させていただきます。</li>
-              <li>２．お客様からお預かりした個人情報の利用目的は以下のとおりです。
-                <ul>
-                  <li>・予約・またはサービス内容の確認、受け渡し</li>
-                  <li>・お問い合わせの返事、ご連絡など</li>
-                </ul>
-              </li>
-              <li>３．お客様より取得させていただいた個人情報は適切に管理し、法律に基づき必要と判断される場合を除き、お客様の同意を得た第三者以外への提供、開示等一切いたしません。 </li>
-              <li>４．お客様よりお預かりした個人情報の安全管理は合理的・組織的・物理的・技術的施策を講じるとともに、関連法令に準じた適切な取り扱いを行うことで個人情報への不正な侵入・紛失・改ざん・漏えい等の危険防止に努めます。</li>
-              <li>５．個人情報について、開示・訂正・利用停止・削除などの要求がある場合には、本人からの要求であることが確認できた場合に限り、法令に従って対応します。</li>
-            </ul>
-          </div><!-- privacy__content -->
-          <div class="privacy__check">
-            <!-- チェックボックス -->
-            <label for="form-privacy" class="privacy__check-wrap">
-              <input id="form-privacy" class="privacy__check-input" type="checkbox" name="yourcheck" value="">
-              <span class="privacy__check-box"></span>
-            </label>
-            <div class="privacy__text-wrap">
-                <p class="privacy__text">上記に同意します</p>
-            </div>
-          </div><!-- privacy__check -->
-        </div><!-- /.privacy -->
-        <div class="contact__submit-box">
-            <button id="js-submit" class="btn contact__submit" type="submit">送信</button>
-        </div><!-- /.contact__submit-box -->
-      </form>
-    </div><!-- inner -->
+              <div class="privacy__text-wrap">
+                  <p class="privacy__text">上記に同意します</p>
+              </div>
+            </div><!-- privacy__check -->
+          </div><!-- /.privacy -->
+          <div class="contact__submit-box">
+              <button id="js-submit" class="btn contact__submit" type="submit">送信</button>
+          </div><!-- /.contact__submit-box -->
+        </form>
+      </div><!-- inner -->
+    </div><!-- contact__bg-wrap -->
   </section>
 
   <footer class="footer">
@@ -544,7 +546,7 @@
           <div class="footer__logo logo logo_footer"><a href="#">まき社会保険労務士事務所</a></div>
           <div class="footer__address">
             <p>〒700-0977</p>
-            <p>岡山県岡山市北区問屋町９−１０１<br class="u-sp">タイルビル3F</p>
+            <p>岡山県岡山市北区問屋町９−１０１<br class="u-tab-down">タイルビル3F</p>
           </div><!-- footer__address -->
         </div><!-- footer__left -->
         <div class="footer__right">
@@ -564,6 +566,7 @@
               <li class="global-nav__item footer-nav__item"><a class="global-nav__link js-global-nav__link footer-nav__link" href="#service">サービス内容</a></li>
               <li class="global-nav__item footer-nav__item"><a class="global-nav__link js-global-nav__link footer-nav__link" href="#company">事務所案内</a></li>
               <li class="global-nav__item footer-nav__item"><a class="global-nav__link js-global-nav__link footer-nav__link" href="#access">アクセス</a></li>
+              <li class="global-nav__item footer-nav__item"><a class="global-nav__link js-global-nav__link footer-nav__link" href="#contact">お問い合わせ</a></li>
             </ul>
           </nav><!-- footer-nav -->  
         </div><!-- footer__right -->

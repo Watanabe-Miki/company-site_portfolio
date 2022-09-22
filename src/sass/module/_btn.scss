@@ -1,15 +1,15 @@
 @use "global" as *;
 .btn {
 	display: inline-block;
-	width: rem(202);
+	width: 202px;
 	max-width: 100%;
-	padding: rem(18.5) rem(10);
+	padding: 18.5px 10px;
 	background-color: $color-main;
 	color: #FFF;
-	font-size: rem(18);
+	font-size: 18px;
 	text-align: center;
 	text-decoration: none;
-	border-radius: rem(33);
+	border-radius: 33px;
 	
 	&:focus,
 	&:hover {
@@ -24,8 +24,7 @@
 	background: $color-bg-base;
 	color: $color-main;
 	border: 1px solid currentColor;
-	width: rem(227);
-	font-size: rem(16);
+	font-size: 16px;
 
 	&:focus,
 	&:hover {

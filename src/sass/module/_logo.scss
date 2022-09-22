@@ -1,14 +1,15 @@
 @use "global" as *;
 .logo {
-  font-size: rem(24);
+  font-size: 24px;
   color: $color-main;
   font-weight: $font-bold;
 
   @include mq('md') {
-    font-size: rem(27);
+    font-size: 27px;
   }
-  @media screen and (min-width: 1250px) {
-    font-size: rem(30);
+
+  @include mq('lg') {
+    font-size: 30px;    
   }
 }
 

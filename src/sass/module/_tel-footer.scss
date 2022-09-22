@@ -4,7 +4,7 @@
   align-items: flex-start;
   
   @include mq('lg') {
-    flex: none;
+    justify-content: center;
   }
 }
 
@@ -19,7 +19,7 @@
 
 .tel-footer__text {
   font-size: 18px;
-  margin-bottom: 0;
+  margin-bottom: 6px;
   margin-top: 3px;
 
   @include mq('lg') {
