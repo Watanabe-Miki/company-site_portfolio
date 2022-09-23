@@ -16,7 +16,7 @@
     height: 120px;
     position: absolute;
     transform: rotate(35deg);
-    background-image: linear-gradient(left,rgba(#90C2DF,0) 0%,rgba(255,255,255,.5) 50%,rgba(#90C2DF,0) 100%);
+    background-image: linear-gradient(to left,rgba(#90C2DF,0) 0%,rgba(255,255,255,.5) 50%,rgba(#90C2DF,0) 100%);
     animation: shiny 2.5s infinite linear;
 
   }

@@ -59,3 +59,62 @@ $(window).scroll(function () {
 
   return false;
 });
+
+/* fadeup */
+function fadeUp(){
+
+  // ふわっ
+  $('.js-fadeup').each(function(){ 
+    var elemPos = $(this).offset().top-20;
+    var scroll = $(window).scrollTop();
+    var windowHeight = $(window).height();
+    if (scroll >= elemPos - windowHeight){
+    $(this).addClass('fadeup');
+    }else{
+    $(this).removeClass('fadeup');
+    }
+    });
+}
+
+  $(window).scroll(function (){
+    fadeUp();
+  });
+
+/* delayup */
+function delayScrollAnime() {
+  var time = 0.1;
+  var value = time;
+  $('.js-delayup-wrapper').each(function () {
+    var parent = this;				
+    var elemPos = $(this).offset().top;
+    var scroll = $(window).scrollTop();
+    var windowHeight = $(window).height();
+    var childs = $(this).children();
+    
+    if (scroll >= elemPos - windowHeight && !$(parent).hasClass("play")) {
+      $(childs).each(function () {
+        
+        if (!$(this).hasClass("delayup")) {
+          
+          $(parent).addClass("play");	
+          $(this).css("animation-delay", value + "s");
+          $(this).addClass("delayup");
+          value = value + time;
+          
+          var index = $(childs).index(this);
+          if((childs.length-1) == index){
+            $(parent).removeClass("play");
+          }
+        }
+      })
+    }else {
+      $(childs).removeClass("delayup");
+      value = time;
+    }
+  })
+}
+
+$(window).scroll(function (){
+  delayScrollAnime();
+});
+

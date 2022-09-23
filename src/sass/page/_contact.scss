@@ -103,6 +103,7 @@
 .contact__submit {
   width: 150px;
   padding: 7.5px 10px;
+  transition: all 0.5s ease 0s;
 
   @include mq('lg') {
     width: 237px;

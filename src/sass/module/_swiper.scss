@@ -1,0 +1,35 @@
+@use "global" as *;
+/* 画像高さ調整 */
+.slide__img {
+  width: 100%;
+  height: 673px;
+  overflow: hidden;
+
+  @include mq('md') {
+    height: 750px;
+  }
+
+  @include mq('lg') {
+    height: 958px;
+  }
+
+
+  img {
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    margin: 0 auto;
+  }
+} 
+
+ /* フェードモード時 共通調整 */
+.swiper-fade {
+  .swiper-slide {
+    transition-property: opacity !important;
+  }
+}
+
+.swiper-container-autoheight, .swiper-container-autoheight .swiper-slide {
+
+} 

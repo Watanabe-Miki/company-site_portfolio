@@ -1,39 +1,41 @@
 @use "global" as *;
 .main {
-  background-image: url(../../../images/main/main-sp.jpg);
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  margin-top: $header-height-sp;
+  width: 100%;
   height: 673px;
-    
-  @include mq('sm') {
-    background-image: url(../../../images/main/main.jpg);
-    background-position: 68% center;
+  margin: 0 auto;
+  margin-top: $header-height-sp;
+  overflow: hidden;
+  position: relative;
+
+  @include mq('md') {
     height: 750px;
   }
-  
+      
   @include mq('lg') {
-    background-position: center center;
-    height: 958px;
     margin-top: $header-height-pc;
+    height: 958px;
   }
 }
 
 .main__inner {
-  padding-top: 39.7%;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 84%;
+  margin: 0 auto;
 
-  @media screen and (min-width: 850px) {
-    padding-top: 312px;
+  @media screen and (min-width: 700px) {
+    top: 50%;
   }
   
   @include mq('lg') {
-    padding-top: 433px;    
+    top: 52%;
   }
 }
 
 .main__content {
-  text-align: center;
 }
 
 .main__title {
@@ -42,6 +44,7 @@
   font-weight: $font-normal;
   text-shadow: 0 3px 6px rgba(0, 0, 0, .16);
   line-height: 1.7;
+  text-align: center;
   
   @include mq('lg') {
     font-size: 40px;
@@ -55,6 +58,7 @@
   font-size: 20px;
   font-weight: $font-normal;
   text-shadow: 0 3px 6px rgba(0, 0, 0, .16);
+  text-align: center;
 
   @include mq('lg') {
     font-size: 30px;

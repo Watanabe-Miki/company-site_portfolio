@@ -297,6 +297,7 @@ select::-ms-expand {
   width: 202px;
   max-width: 100%;
   padding: 18.5px 10px;
+  border: 1px solid transparent;
   background-color: #90C2DF;
   color: #FFF;
   font-size: 18px;
@@ -677,6 +678,45 @@ input[type=email]:hover {
   margin-left: 0.9375rem;
 }
 
+.delayup__card {
+  opacity: 0;
+}
+
+.delayup {
+  -webkit-animation-name: delayUpAnime;
+          animation-name: delayUpAnime;
+  -webkit-animation-duration: 1.5s;
+          animation-duration: 1.5s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+@-webkit-keyframes delayUpAnime {
+  from {
+    opacity: 0;
+    -webkit-transform: translateY(90px);
+            transform: translateY(90px);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes delayUpAnime {
+  from {
+    opacity: 0;
+    -webkit-transform: translateY(90px);
+            transform: translateY(90px);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
 .js-drawer-icon {
   position: fixed;
   top: 52px;
@@ -840,6 +880,41 @@ input[type=email]:hover {
   margin-left: 5px;
 }
 
+.fadeup {
+  -webkit-animation-name: fadeUpAnime;
+          animation-name: fadeUpAnime;
+  -webkit-animation-duration: 1.5s;
+          animation-duration: 1.5s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  opacity: 1;
+}
+
+@-webkit-keyframes fadeUpAnime {
+  from {
+    opacity: 0;
+    -webkit-transform: translateY(90px);
+            transform: translateY(90px);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes fadeUpAnime {
+  from {
+    opacity: 0;
+    -webkit-transform: translateY(90px);
+            transform: translateY(90px);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
 .global-nav {
   display: none;
 }
@@ -1199,7 +1274,7 @@ table.plan-table__inner {
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
     padding: 13px 20px;
-    width: 292px;
+    width: 287px;
   }
 }
 
@@ -1239,8 +1314,9 @@ table.plan-table__inner {
 }
 @media screen and (min-width: 1200px) {
   .plan-table__body-title {
-    padding: ypx 10px;
+    padding: 10px;
     font-size: 1.125rem;
+    width: 245px;
   }
 }
 
@@ -1425,8 +1501,8 @@ input[type=checkbox]:focus + .privacy__check-box::before {
   position: absolute;
   -webkit-transform: rotate(35deg);
           transform: rotate(35deg);
-  background-image: -webkit-gradient(linear, left top, right top, from(rgba(144, 194, 223, 0)), color-stop(50%, rgba(255, 255, 255, .5)), to(rgba(144, 194, 223, 0)));
-  background-image: linear-gradient(left, rgba(144, 194, 223, 0) 0%, rgba(255, 255, 255, .5) 50%, rgba(144, 194, 223, 0) 100%);
+  background-image: -webkit-gradient(linear, right top, left top, from(rgba(144, 194, 223, 0)), color-stop(50%, rgba(255, 255, 255, .5)), to(rgba(144, 194, 223, 0)));
+  background-image: linear-gradient(to left, rgba(144, 194, 223, 0) 0%, rgba(255, 255, 255, .5) 50%, rgba(144, 194, 223, 0) 100%);
   -webkit-animation: shiny 2.5s infinite linear;
           animation: shiny 2.5s infinite linear;
 }
@@ -1468,6 +1544,37 @@ input[type=checkbox]:focus + .privacy__check-box::before {
   left: 0;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
+}
+
+/* 画像高さ調整 */
+.slide__img {
+  width: 100%;
+  height: 673px;
+  overflow: hidden;
+}
+@media screen and (min-width: 768px) {
+  .slide__img {
+    height: 750px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .slide__img {
+    height: 958px;
+  }
+}
+.slide__img img {
+  top: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin: 0 auto;
+}
+
+/* フェードモード時 共通調整 */
+.swiper-fade .swiper-slide {
+  -webkit-transition-property: opacity !important;
+  transition-property: opacity !important;
 }
 
 .tel-footer {
@@ -1718,7 +1825,7 @@ span.tooltip__text_sm {
     margin-bottom: 30px;
   }
 }
-.access__address-row dd {
+.access__address-row dt {
   color: #8FC2DF;
 }
 
@@ -2019,6 +2126,8 @@ span.tooltip__text_sm {
 .contact__submit {
   width: 150px;
   padding: 7.5px 10px;
+  -webkit-transition: all 0.5s ease 0s;
+  transition: all 0.5s ease 0s;
 }
 @media screen and (min-width: 1200px) {
   .contact__submit {
@@ -2160,44 +2269,44 @@ span.tooltip__text_sm {
 }
 
 .main {
-  background-image: url(../../../images/main/main-sp.jpg);
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  margin-top: 120px;
+  width: 100%;
   height: 673px;
+  margin: 0 auto;
+  margin-top: 120px;
+  overflow: hidden;
+  position: relative;
 }
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 768px) {
   .main {
-    background-image: url(../../../images/main/main.jpg);
-    background-position: 68% center;
     height: 750px;
   }
 }
 @media screen and (min-width: 1200px) {
   .main {
-    background-position: center center;
-    height: 958px;
     margin-top: 120px;
+    height: 958px;
   }
 }
 
 .main__inner {
-  padding-top: 39.7%;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 84%;
+  margin: 0 auto;
 }
-@media screen and (min-width: 850px) {
+@media screen and (min-width: 700px) {
   .main__inner {
-    padding-top: 312px;
+    top: 50%;
   }
 }
 @media screen and (min-width: 1200px) {
   .main__inner {
-    padding-top: 433px;
+    top: 52%;
   }
-}
-
-.main__content {
-  text-align: center;
 }
 
 .main__title {
@@ -2206,6 +2315,7 @@ span.tooltip__text_sm {
   font-weight: 400;
   text-shadow: 0 3px 6px rgba(0, 0, 0, .16);
   line-height: 1.7;
+  text-align: center;
 }
 @media screen and (min-width: 1200px) {
   .main__title {
@@ -2220,6 +2330,7 @@ span.tooltip__text_sm {
   font-size: 20px;
   font-weight: 400;
   text-shadow: 0 3px 6px rgba(0, 0, 0, .16);
+  text-align: center;
 }
 @media screen and (min-width: 1200px) {
   .main__text {
@@ -2258,7 +2369,7 @@ span.tooltip__text_sm {
   .service::after {
     background: url(../../../images/service/service-bg_pc.png) no-repeat bottom center/cover;
     bottom: -223px;
-    top: 223px;
+    top: 198px;
   }
 }
 
