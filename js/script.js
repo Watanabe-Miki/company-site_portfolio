@@ -1,25 +1,3 @@
-  var topBtn = $('.pagetop');
-  topBtn.hide();
-
-  // ボタンの表示設定
-  $(window).scroll(function () {
-    if ($(this).scrollTop() > 70) {
-      // 指定px以上のスクロールでボタンを表示
-      topBtn.fadeIn();
-    } else {
-      // 画面が指定pxより上ならボタンを非表示
-      topBtn.fadeOut();
-    }
-  });
-
-  // ボタンをクリックしたらスクロールして上に戻る
-  topBtn.click(function () {
-    $('body,html').animate({
-      scrollTop: 0
-    }, 300, 'swing');
-    return false;
-  });
-
   /* ドロワー */
   $(function(){
     $(".js-drawer-icon").on("click", function(e){
@@ -33,8 +11,7 @@
   });
 
 
-  // スムーススクロール (絶対パスのリンク先が現在のページであった場合でも作動)
-
+  // スムーススクロール
   $(document).on('click', 'a[href*="#"]', function () {
     let time = 400;
     let header = $('header').innerHeight();
@@ -65,9 +42,9 @@ function fadeUp(){
 
   // ふわっ
   $('.js-fadeup').each(function(){ 
-    var elemPos = $(this).offset().top-20;
-    var scroll = $(window).scrollTop();
-    var windowHeight = $(window).height();
+    var elemPos = $(this).offset().top-20; //js-fadeup要素の上20pxの位置の座標を取得
+    var scroll = $(window).scrollTop(); //"window"でブラウザを指定。scroll量を取得
+    var windowHeight = $(window).height(); //"window"の高さを取得
     if (scroll >= elemPos - windowHeight){
     $(this).addClass('fadeup');
     }else{
@@ -118,3 +95,5 @@ $(window).scroll(function (){
   delayScrollAnime();
 });
 
+/* ScrollHint */
+new ScrollHint('.js-scrollable');

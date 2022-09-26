@@ -4,7 +4,6 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1.0" />
   <meta name="format-detection" content="telephone=no" />
-  <meta name="robots" content="noindex,follow" /><!-- 納品時削除！！ -->
   <!-- meta情報 -->
   <title>まき社会保険労務士事務所</title>
   <meta name="description" content="" />
@@ -21,20 +20,11 @@
   <!-- ファビコン -->
   <link rel="icon" href="./images/common/favicon.ico" id="favicon" />
   <link rel="apple-touch-icon" sizes="180x180" href="./images/common/apple-touch-icon-180x180.png" />
-  <!-- Adbe Fonts -->
-  <script>
-    (function(d) {
-      var config = {
-        kitId: 'mrz4zbp',
-        scriptTimeout: 3000,
-        async: true
-      },
-      h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
-    })(document);
-  </script>
-  <!-- Swiper css -->
+  <!-- ScrollHint CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/scroll-hint@1.1.10/css/scroll-hint.css">
+  <!-- Swiper CSS -->
   <link rel="stylesheet" href="./css/swiper-bundle.min.css">
-  <!-- css -->
+  <!-- CSS -->
   <link rel="stylesheet" href="./css/styles.css">
 </head>
 <body>
@@ -134,8 +124,8 @@
       <h3 class="title service__title">サービス内容</h3>
       <p class="service__notice">料金は、従業員数や作成書類によって異なります。<br class="u-sp">お見積もりいたしますので、お気軽にお問い合わせください。</p>
       <h4 class="sub-title service__sub-title">お取り扱いサービス</h4>
-    <!--  <div class="cards service__cards js-delayup-wrapper"> -->
-      <div class="cards service__cards">
+    <div class="cards service__cards js-delayup-wrapper">
+      <!-- <div class="cards service__cards"> -->
         <div class="cards__item card">
           <div class="card__head">
               <img src="./images/service/service-icon01.png" alt="月額顧問料" class="card__icon_01" loading="lazy">
@@ -272,8 +262,8 @@
         </div><!-- /.cards__item -->
       </div><!-- /.service__cards -->
       <h4 class="sub-title service__sub-title">ご契約プラン</h4>
-      <!-- <div class="plan-table service__table js-fadeup"> -->
-      <div class="plan-table service__table">
+      <div class="plan-table service__table js-fadeup js-scrollable">
+      <!-- <div class="plan-table service__table"> -->
         <table class="plan-table__inner service-table__inner">
           <thead class="plan-table__headers">
             <tr class="plan-table__header-row">
@@ -353,8 +343,8 @@
     <div class="inner company__inner">
       <h3 class="title company__title">事務所案内</h3>
       <h4 class="sub-title company__sub-title">事務所概要</h4>
-      <!-- <div class="company-wrap_head js-delayup-wrapper"> -->
-      <div class="company-wrap_head">
+      <div class="company-wrap_head js-delayup-wrapper">
+      <!-- <div class="company-wrap_head"> -->
         <figure class="company__img company__img_head"><img src="./images/company/company-01.jpg" alt="社屋の写真" loading="lazy"></figure>
         <div class="overview company__overview">
           <div class="overview__item">
@@ -393,8 +383,8 @@
         </div><!-- overview -->
       </div><!-- company-wrap_head -->
       <h4 class="sub-title company__sub-title">ご挨拶</h4>
-      <!-- <div class="company-wrap_foot js-delayup-wrapper"> -->
-      <div class="company-wrap_foot">
+      <div class="company-wrap_foot js-delayup-wrapper">
+      <!-- <div class="company-wrap_foot"> -->
         <div class="company-greeting">
           <p class="company-greeting__text">ホームページをご覧いただきありがとうございます。<br>私は、お客様には御社の仕事に集中できる環境があってほしいと思っています。<br>社内でも手続き業務などは出来るかもしれませんが、法改正の対応や年１回の業務で悩むこともあるのではないでしょうか。<br>専門家である社労士に依頼していただくことで、悩む時間がなくなり、お客様には社内の仕事に専念していただける。そんな環境作りのお手伝いができればと思っております。<br>気軽に相談できる身近なパートナーとなるべく、可能な限りサポートさせていただきます。ぜひお問い合わせください。</p>
         </div><!-- company-greeting -->
@@ -430,8 +420,8 @@
   <section id="access" class="access">
     <div class="inner access__inner">
       <h3 class="title access__title">アクセス</h3>
-      <!-- <div class="access-wrap js-delayup-wrapper"> -->
-      <div class="access-wrap">
+      <div class="access-wrap js-delayup-wrapper">
+      <!-- <div class="access-wrap"> -->
         <div class="access__map">
           <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3282.4207800510276!2d133.88784901566166!3d34.644074880449075!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x355407614a7ca539%3A0x6ac90b763fa9639f!2zZmFiYml05bKh5bGx5ZWP5bGL55S6!5e0!3m2!1sja!2sjp!4v1663632600801!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div><!-- access__map -->
@@ -454,7 +444,7 @@
             </dl><!-- access__address-row -->
           </div><!-- access__address-content -->
           <div class="access__link-box">
-            <a href="https://g.page/fabbit-okayamatoiyacho?share" class="btn btn_blue access__link hover-anime" target="_blank" rel="referrer">Googlemapで見る</a>
+            <a href="https://g.page/fabbit-okayamatoiyacho?share" class="btn btn_blue access__link" target="_blank" rel="referrer">Googlemapで見る</a>
           </div>          
         </div><!-- access__address -->
       </div><!-- access-wrap -->
@@ -468,8 +458,8 @@
         <div class="contact__notice">
           <p>ご質問、ご相談は以下のフォームより<br class="u-sp">お送りください。<br>内容確認後、すみやかにご返信いたします。</p>
         </div>
-        <!-- <form id="js-form" action="example.php" method="post" class="contact-form contact__form js-fadeup"> -->
-        <form id="js-form" action="example.php" method="post" class="contact-form contact__form">
+        <form id="js-form" action="example.php" method="post" class="contact-form contact__form js-fadeup">
+        <!-- <form id="js-form" action="example.php" method="post" class="contact-form contact__form"> -->
           <div class="contact-form__list">
             <dl class="contact-form__item">
               <dt class="contact-form__item-title">
@@ -609,11 +599,27 @@
       </div><!-- footer-wrap -->
     </div><!-- inner -->
   </footer>
-  <!-- JavaScript -->
+
+  <!-- Adbe Fonts -->
+  <script>
+    (function(d) {
+      var config = {
+        kitId: 'mrz4zbp',
+        scriptTimeout: 3000,
+        async: true
+      },
+      h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+    })(document);
+  </script>
+  <!-- ScrollHint CDN -->
+  <script src="https://unpkg.com/scroll-hint@1.1.10/js/scroll-hint.js"></script>
+  <!-- jQuery CDN -->
   <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
   <!-- Swiper -->
   <script src="./js/swiper-bundle.min.js"></script>
   <script src="./js/swiper.js"></script>
+  <!-- jQuery -->
   <script defer src="./js/script.js"></script>
+
 </body>
 </html>

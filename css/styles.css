@@ -2338,6 +2338,15 @@ span.tooltip__text_sm {
   }
 }
 
+/* テキスト影濃いめパターン */
+.main__title {
+  text-shadow: 0 0 6px rgba(0, 0, 0, .6);
+}
+
+.main__text {
+  text-shadow: 0 0 6px rgba(0, 0, 0, .6);
+}
+
 .service {
   padding-top: 106px;
   background: #E7F6FF;
