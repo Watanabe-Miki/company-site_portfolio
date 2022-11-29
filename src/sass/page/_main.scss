@@ -1,25 +1,29 @@
 @use "global" as *;
 .main {
-  width: 100%;
-  height: 673px;
+  //width: 100%;
+  //height: 673px;
   margin: 0 auto;
   margin-top: $header-height-sp;
   overflow: hidden;
   position: relative;
-
+  aspect-ratio: 375 / 673;
+  
+  @include mq('sm') {
+    aspect-ratio: 650 / 479;
+  }
   @include mq('md') {
-    height: 750px;
+    //height: 750px;
   }
       
   @include mq('lg') {
     margin-top: $header-height-pc;
-    height: 958px;
+    //height: 958px;
   }
 }
 
 .main__inner {
   position: absolute;
-  top: 40%;
+  top: 49%;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 2;
@@ -42,7 +46,6 @@
   color: #ffffff;
   font-size: 30px;
   font-weight: $font-normal;
-  text-shadow: 0 3px 6px rgba(0, 0, 0, .16);
   line-height: 1.7;
   text-align: center;
   
@@ -57,7 +60,6 @@
   color: #ffffff;
   font-size: 20px;
   font-weight: $font-normal;
-  text-shadow: 0 3px 6px rgba(0, 0, 0, .16);
   text-align: center;
 
   @include mq('lg') {
@@ -65,7 +67,7 @@
   }
 }
 
-/* テキスト影濃いめパターン */
+/* テキスト影 */
 .main__title {
   text-shadow: 0 0 6px rgba(0,0,0,0.6);
 }         

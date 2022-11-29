@@ -1,6 +1,39 @@
 @use "global" as *;
 /* 画像高さ調整 */
 .slide__img {
+  //width: 100%;
+  //height: 673px;
+  aspect-ratio: 375 / 673;
+  background-position: top center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  overflow: hidden;
+
+  @include mq('sm') {
+    aspect-ratio: 650 / 479;
+  }
+
+  @include mq('md') {
+    //height: 950px;
+  }
+
+  @include mq('lg') {
+    //height: 958px;
+  }
+
+  img {
+    top: 0;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+  }
+} 
+
+.slide__img_left {
+  background-position: top left;
+}
+
+/* .slide__img {
   width: 100%;
   height: 673px;
   overflow: hidden;
@@ -13,7 +46,6 @@
     height: 958px;
   }
 
-
   img {
     top: 0;
     width: 100%;
@@ -22,7 +54,7 @@
     margin: 0 auto;
   }
 } 
-
+ */
  /* フェードモード時 共通調整 */
 .swiper-fade {
   .swiper-slide {

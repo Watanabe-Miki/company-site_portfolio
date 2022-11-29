@@ -226,11 +226,6 @@ textarea {
   resize: vertical;
 }
 
-input[type=checkbox],
-input[type=radio] {
-  display: none;
-}
-
 input[type=submit],
 input[type=button],
 label,
@@ -1548,29 +1543,50 @@ input[type=checkbox]:focus + .privacy__check-box::before {
 
 /* 画像高さ調整 */
 .slide__img {
-  width: 100%;
-  height: 673px;
+  aspect-ratio: 375/673;
+  background-position: top center;
+  background-size: cover;
+  background-repeat: no-repeat;
   overflow: hidden;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 600px) {
   .slide__img {
-    height: 750px;
-  }
-}
-@media screen and (min-width: 1200px) {
-  .slide__img {
-    height: 958px;
+    aspect-ratio: 650/479;
   }
 }
 .slide__img img {
   top: 0;
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
   margin: 0 auto;
 }
 
+.slide__img_left {
+  background-position: top left;
+}
+
+/* .slide__img {
+  width: 100%;
+  height: 673px;
+  overflow: hidden;
+
+  @include mq('md') {
+    height: 750px;
+  }
+
+  @include mq('lg') {
+    height: 958px;
+  }
+
+  img {
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    margin: 0 auto;
+  }
+} 
+ */
 /* フェードモード時 共通調整 */
 .swiper-fade .swiper-slide {
   -webkit-transition-property: opacity !important;
@@ -2269,28 +2285,26 @@ span.tooltip__text_sm {
 }
 
 .main {
-  width: 100%;
-  height: 673px;
   margin: 0 auto;
   margin-top: 120px;
   overflow: hidden;
   position: relative;
+  aspect-ratio: 375/673;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 600px) {
   .main {
-    height: 750px;
+    aspect-ratio: 650/479;
   }
 }
 @media screen and (min-width: 1200px) {
   .main {
     margin-top: 120px;
-    height: 958px;
   }
 }
 
 .main__inner {
   position: absolute;
-  top: 40%;
+  top: 49%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
@@ -2313,7 +2327,6 @@ span.tooltip__text_sm {
   color: #ffffff;
   font-size: 30px;
   font-weight: 400;
-  text-shadow: 0 3px 6px rgba(0, 0, 0, .16);
   line-height: 1.7;
   text-align: center;
 }
@@ -2329,7 +2342,6 @@ span.tooltip__text_sm {
   color: #ffffff;
   font-size: 20px;
   font-weight: 400;
-  text-shadow: 0 3px 6px rgba(0, 0, 0, .16);
   text-align: center;
 }
 @media screen and (min-width: 1200px) {
@@ -2338,7 +2350,7 @@ span.tooltip__text_sm {
   }
 }
 
-/* テキスト影濃いめパターン */
+/* テキスト影 */
 .main__title {
   text-shadow: 0 0 6px rgba(0, 0, 0, .6);
 }
